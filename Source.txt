@@ -1,0 +1,915 @@
+Used CMD
+
+npx create-next-app@latest
+
+npm install swiper
+
+npm install bootstrap-icons
+
+npm install remixicon
+
+npm install @iconify/react
+
+
+npm install remixicon react-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
+
+npm install react-countup
+
+npm install chart.js
+
+npm install chart.js react-chartjs-2
+
+
+
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import 'remixicon/fonts/remixicon.css';
+
+
+{ label: "Home", href: "/" },
+{ label: "Jobs", href: "/UI-Components/Jobs" },
+{ label: "Recruters", href: "/UI-Components/Recruter" },
+{ label: "Candidates", href: "/UI-Components/Candidats" },
+{ label: "Blog", href: "/UI-Components/Blogs" },
+{
+  label: "Pages",
+  href: "/UI-Components/Pages/About",
+  dropdown: [
+    { label: "About", href: "/UI-Components/Pages/About" },
+    { label: "Faqs", href: "/UI-Components/Pages/Faqs" },
+    { label: "Contact", href: "/UI-Components/Pages/Contact" },
+  ],
+},
+{ label: "Dashboard", href: "/Dashboard" },
+
+
+
+// Hero
+
+---Role---
+
+"Software Engineer",
+"Data Scientist",
+"Project Manager",
+"Web Developer",
+"Marketing Specialist",
+"Financial Analyst",
+"Human Resources",
+"Sales Representative",
+"Content Writer",
+
+
+
+Hey there! We’re Nubi
+
+Effective and affordable Job solutions
+
+Each month, more than 3 million job seekers turn to website in
+their search for work, making over 140,000 applications every
+single day
+
+
+Search
+
+Popular Searches :
+Designer, Developer, Web, IOS, PHP, Senior, Engineer
+
+
+Job Offers
+
+In Software Engineer
+In Web Development
+In Data Scientist
+In Graphic Designer
+
+
+
+// Hero Section
+
+p-1  Each month, more than 3 million job seekers turn to website in their search for work, making over 140,000 applications every single day
+
+// Category Section
+
+[
+
+    {
+        image: SCIcon1,
+        title: "Software \n Engineer",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon2,
+        title: "Data \n Scientist",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon3,
+        title: "Web \n Developer",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon4,
+        title: "Graphic \n Designer",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon5,
+        title: "Project \n Manager",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon6,
+        title: "Marketing \n Specialist",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon7,
+        title: "Financial \n Analyst",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon8,
+        title: "Human \n Resources",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon9,
+        title: "Sales \n Represent",
+        subtitle: "2 Open Position",
+    },
+    {
+        image: SCIcon10,
+        title: "Content \n Writer",
+        subtitle: "2 Open Position",
+    },
+]
+
+// Job Section 
+
+[
+    {
+        "id": "1",
+        "title": "Yata",
+        "name": "Nuclear Power Engineer",
+        "location": "Pereira",
+        "tag": "React",
+        "image": "/job-1.webp",
+        "days": "7 days ago",
+        "price": "$53k"
+    },
+    {
+        "id": "2",
+        "title": "Blognation",
+        "location": "Solna",
+        "name": "Technical Writer",
+        "tag": "Trending",
+        "image": "/job-2.webp",
+        "days": "12 days ago",
+        "price": "$20k"
+    },
+    {
+        "id": "3",
+        "title": "Mynte",
+        "location": "Minchinābād",
+        "name": "Professor",
+        "tag": "Trending",
+        "image": "/job-3.webp",
+        "days": "10 days ago",
+        "price": "$27k"
+    },
+    {
+        "id": "4",
+        "title": "Voonder",
+        "location": "Obrenovac",
+        "name": "Financial Advisor",
+        "tag": "Wordpress",
+        "image": "/job-4.webp",
+        "days": "21 days ago",
+        "price": "$22k"
+    },
+    {
+        "id": "5",
+        "title": "Abata",
+        "location": "Solna",
+        "name": "Associate Professor",
+        "tag": "Marketing",
+        "image": "/job-5.webp",
+        "days": "15 days ago",
+        "price": "$34k"
+    },
+    {
+        "id": "6",
+        "title": "Linktype",
+        "location": "Palhoça",
+        "name": "GIS Technical Architect",
+        "tag": "Marketing",
+        "image": "/job-6.webp",
+        "days": "9 days ago",
+        "price": "$18k"
+    },
+    {
+        "id": "7",
+        "title": "Devify",
+        "location": "Neikeng",
+        "name": "Electrical Engineer",
+        "tag": "Trending",
+        "image": "/job-7.webp",
+        "days": "2 days ago",
+        "price": "$32k"
+    },
+    {
+        "id": "8",
+        "title": "Eimbee",
+        "location": "Neikeng",
+        "name": "Assistant Media Planner",
+        "tag": "Design",
+        "image": "/job-8.webp",
+        "days": "5 days ago",
+        "price": "$38k"
+    },
+    {
+        "id": "9",
+        "title": "Jazzy",
+        "location": "Glendale",
+        "name": "Environment Specialist",
+        "tag": "App",
+        "image": "/job-9.webp",
+        "days": "18 days ago",
+        "price": "$19k"
+    },
+    {
+        "id": "10",
+        "title": "Jamia",
+        "location": "Oka",
+        "name": "Associate Professor",
+        "tag": "React",
+        "image": "/job-10.webp",
+        "days": "2 days ago",
+        "price": "$25k"
+    }
+] 
+
+// Job Details 
+
+p-1 As a Human Resources Coordinator, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.
+
+p-2 Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.
+
+p-3 Work with BAs, product managers and tech teams to lead the Product Design
+
+p-4 Maintain quality of the design process and ensure that when designs are translated into code they accurately reflect the design specifications.
+
+p-5 Accurately estimate design tickets during planning sessions
+
+p-6 Contribute to sketching sessions involving non-designersCreate, iterate and maintain UI deliverables including sketch files, style guides, high fidelity prototypes, micro interaction specifications and pattern libraries.
+
+p-7 Ensure design choices are data led by identifying assumptions to test each sprint, and work with the analysts in your team to plan moderated usability test sessions.
+
+p-8 Design pixel perfect responsive UI’s and understand that adopting common interface patterns is better for UX than reinventing the wheel
+
+p-9 Present your work to the wider business at Show & Tell sessions.
+
+// Why Choose Us Section
+
+p-1 At our job website, we prioritize delivering an exceptional customer experience that sets us apart from the competition. Here are some reasons why our customers love
+
+p-2 We provide our customers with access to a vast and diverse range of job opportunities across various industries and sectors.
+
+p-3 Our powerful search and filtering options allow users to refine their job searches based on specific criteria such as location
+
+p-4 Resources and Advice In addition to job listings, we offer a wealth of career resources and advice. Our blog, articles, and guides cover a wide.
+
+p-5 We provide our customers with access to a vast and diverse range of job opportunities across various industries and sectors.
+
+// Banner Section
+
+p-1 We help candidates know whether they’re qualified for a job – and allow you to see their match potential – giving you a better pool of qualified candidates
+
+// Cities Section
+
+[
+    {
+        "id": "1",
+        "name": "San Francisco",
+        "positions": "6 Open Positions",
+        "image": "/Cities-1.webp"
+    },
+    {
+        "id": "2",
+        "name": "Seattle",
+        "positions": "5 Open Positions",
+        "image": "/Cities-2.webp"
+    },
+    {
+        "id": "3",
+        "name": "Austin",
+        "positions": "4 Open Positions",
+        "image": "/Cities-3.webp"
+    },
+    {
+        "id": "4",
+        "name": "New York",
+        "positions": "5 Open Positions",
+        "image": "/Cities-4.webp"
+    },
+    {
+        "id": "5",
+        "name": "Boston",
+        "positions": "3 Open Positions",
+        "image": "/Cities-5.webp"
+    },
+    {
+        "id": "6",
+        "name": "San Jose",
+        "positions": "6 Open Positions",
+        "image": "/Cities-6.webp"
+    },
+    {
+        "id": "7",
+        "name": "Raleigh, Nort",
+        "positions": "5 Open Positions",
+        "image": "/Cities-7.webp"
+    },
+    {
+        "id": "8",
+        "name": "Washington",
+        "positions": "4 Open Positions",
+        "image": "/Cities-8.webp"
+    },
+    {
+        "id": "9",
+        "name": "Denver",
+        "positions": "3 Open Positions",
+        "image": "/Cities-9.webp"
+    },
+    {
+        "id": "10",
+        "name": "Chicago",
+        "positions": "4 Open Positions",
+        "image": "/Cities-10.webp"
+    },
+    {
+        "id": "11",
+        "name": "Los Angeles",
+        "positions": "6 Open Positions",
+        "image": "/Cities-11.webp"
+    },
+    {
+        "id": "12",
+        "name": "Atlanta",
+        "positions": "5 Open Positions",
+        "image": "/Cities-12.webp"
+    }
+]
+
+p-1 Thriving Hubs for Career Advancement and Exciting Opportunities
+
+
+// Testimonial Section 
+
+p-1 Testimonials that Showcase our Exceptional Service and Dedication
+
+const testimonial = [
+    {
+        img: Candidat1,
+        name: "Jenny Missy",
+        role: "Web Developer",
+        pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    },
+    {
+        img: Candidat2,
+        name: "Jenny Missy",
+        role: "Web Developer",
+        pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    },
+    {
+        img: Candidat3,
+        name: "Jenny Missy",
+        role: "Web Developer",
+        pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    },
+    {
+        img: Candidat4,
+        name: "Jenny Missy",
+        role: "Web Developer",
+        pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    },
+    {
+        img: Candidat5,
+        name: "Jenny Missy",
+        role: "Web Developer",
+        pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    },
+    {
+        img: Candidat6,
+        name: "Jenny Missy",
+        role: "Web Developer",
+        pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    },
+]
+
+// Partners Section
+
+const CountData = [
+    {
+        image: count1,
+        title: "Annual Partner",
+        countnum: 100
+    },
+    {
+        image: count2,
+        title: "Annual Partner",
+        countnum: 90
+    },
+    {
+        image: count3,
+        title: "Annual Partner",
+        countnum: 75
+    },
+    {
+        image: count4,
+        title: "Annual Partner",
+        countnum: 25
+    },
+]
+
+// Blog Section
+
+p-1 Unleash Your Curiosity with Engaging Articles, Expert Opinions, and Inspiring Stories
+
+[
+    {
+        "id": "1",
+        "image": "/Blog-1.webp",
+        "detailImg": "/blog-detail-1.jpg",
+        "tag": "Technology",
+        "date": "2025-01-05",
+        "title": "Top 10 In-Demand Web Techology Jobs of 2025",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+    },
+    {
+        "id": "2",
+        "image": "/Blog-2.webp",
+        "detailImg": "/blog-detail-2.jpg",
+        "tag": "Career Advice",
+        "date": "2025-02-10",
+        "title": "The Art of Writing an Effective Cover Letter",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+    },
+    {
+        "id": "3",
+        "image": "/Blog-3.webp",
+        "detailImg": "/blog-detail-3.jpg",
+        "tag": "Career Advice",
+        "date": "2025-03-15",
+        "title": "Mastering the Job Interview: Essential Tips for Success",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+    },
+    {
+        "id": "4",
+        "image": "/Blog-4.webp",
+        "detailImg": "/blog-detail-4.jpg",
+        "tag": "Workplace Trends",
+        "date": "2025-04-20",
+        "title": "The Rise of Remote Work and its Benefits",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+    },
+    {
+        "id": "5",
+        "image": "/Blog-5.webp",
+        "detailImg": "/blog-detail-5.jpg",
+        "tag": "Sales and Marketing",
+        "date": "2025-05-12",
+        "title": "Exploring Careers in Digital Marketing",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+    },
+    {
+        "id": "6",
+        "image": "/Blog-2.webp",
+        "detailImg": "/blog-detail-2.jpg",
+        "tag": "Healthcare",
+        "date": "2025-06-18",
+        "title": "The Impact of Artificial Intelligence in Healthcare",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+    },
+    {
+        "id": "7",
+        "image": "/Blog-3.webp",
+        "detailImg": "/blog-detail-3.jpg",
+        "tag": "Artificial Intelligence",
+        "date": "2025-07-08",
+        "title": "How AI is Revolutionizing Front-End Development",
+        "desc": "From smart code suggestions to automated testing, AI tools are reshaping how developers build and optimize modern websites."
+    },
+    {
+        "id": "8",
+        "image": "/Blog-4.webp",
+        "detailImg": "/blog-detail-4.jpg",
+        "tag": "Productivity",
+        "date": "2025-08-14",
+        "title": "Balancing Work and Life in a Hybrid Environment",
+        "desc": "Learn how professionals are maintaining productivity and mental wellness while working in hybrid office setups."
+    },
+    {
+        "id": "9",
+        "image": "/Blog-5.webp",
+        "detailImg": "/blog-detail-5.jpg",
+        "tag": "Freelancing",
+        "date": "2025-09-22",
+        "title": "Essential Skills Every Freelancer Should Master in 2025",
+        "desc": "Discover the top skills that freelancers need to stay competitive—from personal branding to mastering client communication."
+    }
+]
+
+
+// Footer Section
+
+p-1 Prexjob is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.
+
+
+
+
+
+// Recruters
+
+
+Work for the best companies in the world
+
+Showing {RecruterData.length} Recruters
+
+
+// Recruters json
+
+[
+    {
+        "id": "1",
+        "image": "/job-1.webp",
+        "name": "Jabberbean",
+        "location": "Kuanheum",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "13 Jobs"
+    },
+    {
+        "id": "2",
+        "image": "/job-2.webp",
+        "name": "Jaxbean",
+        "location": "Shibetsu",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "8 Jobs"
+    },
+    {
+        "id": "3",
+        "image": "/job-3.webp",
+        "name": "Shuffledrive",
+        "location": "Limoeiro de Anadia",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "15 Jobs"
+    },
+    {
+        "id": "4",
+        "image": "/job-4.webp",
+        "name": "Bubblemix",
+        "location": "Kayanza",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "7 Jobs"
+    },
+    {
+        "id": "5",
+        "image": "/job-5.webp",
+        "name": "Brainlounge",
+        "location": "Perpignan",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "9 Jobs"
+    },
+    {
+        "id": "6",
+        "image": "/job-6.webp",
+        "name": "Dynabox",
+        "location": "Roanne",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "5 Jobs"
+    },
+    {
+        "id": "7",
+        "image": "/job-7.webp",
+        "name": "Brainlounge",
+        "location": "Lena",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "6 Jobs"
+    },
+    {
+        "id": "8",
+        "image": "/job-8.webp",
+        "name": "Skajo",
+        "location": "Dębno",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "6 Jobs"
+    },
+    {   
+        "id": "9",
+        "image": "/job-9.webp",
+        "name": "Edgetag",
+        "location": "Salinggara",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "8 Jobs"
+    },
+    {   
+        "id": "10",
+        "image": "/job-10.webp",
+        "name": "Meemm",
+        "location": "Dumbéa",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "3 Jobs"
+    },
+    {   
+        "id": "11",
+        "image": "/job-11.webp",
+        "name": "Wordware",
+        "location": "Ticaco",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "5 Jobs"
+    },
+    {   
+        "id": "12",
+        "image": "/job-12.webp",
+        "name": "Skimia",
+        "location": "Limbalod",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "3 Jobs"
+    },
+    {   
+        "id": "13",
+        "image": "/job-13.webp",
+        "name": "Brightbean",
+        "location": "Biaoxi",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "6 Jobs"
+    },
+    {   
+        "id": "14",
+        "image": "/job-14.webp",
+        "name": "Meevee",
+        "location": "Kebonkaret",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "9 Jobs"
+    },
+    {   
+        "id": "15",
+        "image": "/job-15.webp",
+        "name": "Skiba",
+        "location": "Lingquan",
+        "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+        "jobs": "12 Jobs"
+    }
+]
+
+
+As a Human Resources Coordinator, you will work within a Product 
+Delivery Team fused with UX, engineering, product and data talent. 
+You will help the team design beautiful interfaces that solve business 
+challenges for our clients. We work with a number of Tier 1 banks on 
+building web-based applications for AML, KYC and Sanctions List management
+workflows. This role is ideal if you are looking to segue your career 
+into the FinTech or Big Data arenas.
+
+
+
+// Candidates
+
+Work with the most talented candidates in the world
+
+Showing  {CandidateData.length} Candidates
+
+// Candidates Json
+
+[
+    {
+        "id": "1",
+        "image": "/Candidat-1.webp",
+        "name": "Tiphany Espinosa",
+        "role": "Automation Specialist II",
+        "location": "Nāṟay"
+    },
+    {
+        "id": "2",
+        "image": "/Candidat-2.webp",
+        "name": "Marthe Alesi",
+        "role": "Speech Pathologist",
+        "location": "Dabachang"
+    },
+    {
+        "id": "3",
+        "image": "/Candidat-3.webp",
+        "name": "Lisette Rouf",
+        "role": "Human Resources Assistant II",
+        "location": "Guangning"
+    },
+    {
+        "id": "4",
+        "image": "/Candidat-4.webp",
+        "name": "Lindsay Cotterel",
+        "role": "Biostatistician II",
+        "location": "Huangzhuang"
+    },
+    {
+        "id": "5",
+        "image": "/Candidat-5.webp",
+        "name": "Jessie O'Sheerin",
+        "role": "Speech Pathologist",
+        "location": "Monterrey"
+    },
+    {
+        "id": "6",
+        "image": "/Candidat-6.webp",
+        "name": "Terrence Coppenhall",
+        "role": "Programmer III ",
+        "location": "Krajan Joho"
+    },
+    {
+        "id": "7",
+        "image": "/Candidat-7.webp",
+        "name": "Milzie Westberg",
+        "role": "VP Sales ",
+        "location": "Masaguisi"
+    },
+    {
+        "id": "8",
+        "image": "/Candidat-8.webp",
+        "name": "Fred Wickendon",
+        "role": "Executive Secretary",
+        "location": "Villa Atamisqui"
+    },
+    {
+        "id": "9",
+        "image": "/Candidat-9.webp",
+        "name": "Mireielle Coundley",
+        "role": "Administrative Officer",
+        "location": "Gaoyan"
+    },
+    {
+        "id": "10",
+        "image": "/Candidat-10.webp",
+        "name": "Tabbitha Bretherick",
+        "role": "Programmer Analyst I",
+        "location": "Las Vegas"
+    },
+    {
+        "id": "11",
+        "image": "/Candidat-11.webp",
+        "name": "Kaleb Purslow",
+        "role": "Sales Representative",
+        "location": "Jambubol"
+    },
+    {
+        "id": "12",
+        "image": "/Candidat-12.webp",
+        "name": "Peta Braidford",
+        "role": "Environmental Specialist",
+        "location": "Camiri"
+    }
+]
+
+
+They bring strong skills and experience in
+their field, contributing innovative solutions and great teamwork
+in every project.
+
+
+Skills
+
+Javascript
+Typescript
+React
+Css
+Html5
+
+Work Experience
+
+February 2025
+Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.
+
+March 2025
+All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.
+
+March 2025
+Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
+
+
+Education & Training
+
+February 2025
+
+March 2025
+
+April 2025
+
+
+
+// Our Blog
+
+Work for the best companies in the world
+
+Showing  {Blogs.length} Blogs
+
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo 
+est eget consequat imperdiet. Suspendisse laoreet scelerisque lobortis. 
+Mauris facilisis hendrerit nulla at vehicula.
+
+
+More  Info
+
+
+Duis hendrerit dui in dui ornare luctus. Nullam gravida tincidunt lorem cursus suscipit. Integer scelerisque sem et sem porta, eu volutpat mi tempor. Duis interdum sodales lacus non tempor. Nam mattis, sapien a commodo ultrices, nunc orci tincidunt ante, tempus tempus turpis metus laoreet lacus. Praesent condimentum, arcu ut fringilla tincidunt, augue diam pretium augue, sit amet vestibulum nunc felis vel metus. Duis dolor nulla, pellentesque non ultrices ut, convallis eu felis.
+
+Suspendisse potenti. Ut in nulla a purus bibendum convallis. Suspendisse id nunc maximus, suscipit nte ac, vulputate massa. Sed ut nunc suscipit, bibendum arcu a, interdum elit. Nullam laoreet mollis dictum. Ut suscipit, magna at elementum iaculis, erat erat fermentum justo, sit amet ultrices enim leo sit amet purus. Nulla sed erat molestie, auctor mauris lobortis, iaculis justo.
+
+Duis dolor nulla, pellentesque non ultrices ut, convallis eu felis. Duis luctus tempor arcu, vitae elementum massa porta non. Morbi aliquet, neque ut volutpat sodales, dui enim facilisis enim, ut dictum lacus neque in urna. Nam metus elit, ullamcorper pretium nisi at, aliquet gravida lectus. Nullam id lectus pellentesque, suscipit dolor eget, consequat velit. Pellentesque finibus commodo nisl, id
+
+interdum leo. Maecenas aliquam felis justo, ut sagittis nunc maximus ut.
+Duis luctus tempor arcu, vitae elementum massa porta non. Morbi aliquet, neque ut volutpat sodales, dui enim facilisis enim, ut dictum lacus neque in urna. Nam metus elit, ullamcorper pretium nisi at, aliquet gravida lectus. Nullam id lectus pellentesque, suscipit dolor eget, consequat velit. Pellentesque finibus commodo nisl, id interdum leo. Maecenas aliquam felis justo, ut sagittis nunc maximus ut.
+
+Geraldine Tusoy
+
+CEO, Co Founders
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus omnis impedit, autem laborum excepturi tempora, assumenda vero consequatur placeat dolorum accusamus expedita delectus similique deserunt mollitia illum non officia eius!
+
+View  More Articles
+
+
+// Dashboard
+
+{ key: "dashboard", icon: "/home.svg", label: "Dashboard" },
+{ key: "postedJobs", icon: "/bag.svg", label: "Posted Jobs" },
+{ key: "recruters", icon: "/user.svg", label: "Recruters" },
+{ key: "candidates", icon: "/users.svg", label: "Candidates" },
+{ key: "logout", icon: "/logout.png", label: "Logout" },
+
+
+
+// Chart
+import {
+    Chart,
+    BarController,
+    BarElement,
+    CategoryScale,
+    LinearScale,
+    Title,
+    Tooltip,
+    Legend,
+} from "chart.js";
+import Link from "next/link";
+
+Chart.register(BarController, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
+
+
+
+const chartRef = useRef<HTMLCanvasElement>(null);
+
+    useEffect(() => {
+        if (!chartRef.current) return;
+        const ctx = chartRef.current.getContext("2d");
+        if (!ctx) return;
+
+        const myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Applied Jobs", "Recruters", "Candidates", "Articles", "Resumes"],
+                datasets: [
+                    {
+                        label: "Total ",
+                        data: [Jobs.length, Recruters.length, Candidates.length, Blog.length, 13],
+                        backgroundColor: [
+                            "rgba(79, 70, 229, 0.7)",
+                            "rgba(16, 185, 129, 0.7)",
+                            "rgba(245, 158, 11, 0.7)",
+                            "rgba(244, 63, 94, 0.7)",
+                            "rgba(14, 165, 233, 0.7)",
+                        ],
+                        borderColor: [
+                            "#4F46E5",
+                            "#10B981",
+                            "#F59E0B",
+                            "#F43F5E",
+                            "#0EA5E9",
+                        ],
+                        borderWidth: 1,
+                        borderRadius: 30,
+                        barPercentage: 0.7,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true },
+                },
+                animation: { duration: 1200, easing: "easeOutQuart" },
+            },
+        });
+
+        return () => myChart.destroy();
+    }, [Jobs.length, Recruters.length, Candidates.length, Blog.length]);
