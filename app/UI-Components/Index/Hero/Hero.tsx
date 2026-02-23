@@ -28,6 +28,7 @@ const Hero = () => {
     <>
       <div className="px-[8%] lg:px-[16%] pt-28 lg:pt-36 pb-12 hero">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
+          {/* izquierda */}
           <div className="w-full lg:w-1/2">
             <div className="flex items-center gap-2">
               <Image
@@ -78,6 +79,45 @@ const Hero = () => {
                     ))}
                   </ul>
                 )}
+              </div>
+
+              <div className="flex items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="border border-gray-400 px-4 py-2 rounded-md w-full"
+                />
+
+                <button className="nav-button items-center cursor-pointer bg-prim text-white rounded-md font-bold px-5 py-2 hover:bg-white hover:text-black transition-all duration-300 hidden lg:flex">
+                  <Link href="/UI-Components/Jobs">
+                    Search
+                  </Link>
+                </button>
+              </div>
+            </div>
+
+            <p className="text-gray-400">
+              <span className="text-lg text-gray-300">Popular Searches :</span> {" "}
+              Designer, Developer, Web, IOS, PHP, Senior, Engineer
+            </p>
+          </div>
+
+          {/* derecha */}
+          <div className="w-full lg:w-1/2">
+            <div className="flex justify-center items-center relative">
+              <div className="hero-image">
+
+              </div>
+
+              {/* tarjeta1 */}
+              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[40%] -left-7 md:left-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+                <h2 className="text-2xl font-semibold text-prim">
+                  <span className="text-5xl Merienda pr-2">25</span>Job Offers
+                </h2>
+
+                <p className="text-gray-800">
+                  In Software Engineer
+                </p>
               </div>
             </div>
           </div>
