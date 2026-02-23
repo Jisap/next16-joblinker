@@ -110,7 +110,7 @@ const Hero = () => {
               </div>
 
               {/* tarjeta1 */}
-              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[40%] -left-7 md:left-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[10%] sm:top-[40%] -left-7 md:left-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
                 <h2 className="text-2xl font-semibold text-prim">
                   <span className="text-5xl Merienda pr-2">25</span>Job Offers
                 </h2>
@@ -119,6 +119,38 @@ const Hero = () => {
                   In Software Engineer
                 </p>
               </div>
+              {/* tarjeta2 */}
+              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[45%] -right-7 md:right-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+                <h2 className="text-2xl font-semibold text-prim">
+                  <span className="text-5xl Merienda pr-2">20</span>Job Offers
+                </h2>
+
+                <p className="text-gray-800">
+                  In Web Development
+                </p>
+              </div>
+              {/* tarjeta3 */}
+              <div className="job-offer-span3 flex flex-col gap-2 absolute bottom-[20%] sm:bottom-[10%] -left-7 md:left-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+                <h2 className="text-2xl font-semibold text-prim">
+                  <span className="text-5xl Merienda pr-2">15</span>Job Offers
+                </h2>
+
+                <p className="text-gray-800">
+                  In Data Scientist
+                </p>
+              </div>
+              {/* tarjeta4 */}
+              <div className="job-offer-span4 flex flex-col gap-2 absolute bottom-[5%] -right-7 md:right-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+                <h2 className="text-2xl font-semibold text-prim">
+                  <span className="text-5xl Merienda pr-2">12</span>Job Offers
+                </h2>
+
+                <p className="text-gray-800">
+                  In Graphic Designer
+                </p>
+              </div>
+
+
             </div>
           </div>
         </div>

@@ -85,6 +85,68 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(135deg, #462880d5, #8e2de2);
+  background: linear-gradient(135deg, #462880d5, #8e2de2d2);
   z-index: -1;
+}
+
+.job-offer-span1,
+.job-offer-span2,
+.job-offer-span3,
+.job-offer-span4 {
+  animation: Anim-TD 2s infinite forwards linear;
+}
+
+.job-offer-span2 {
+  animation-delay: 0.1s;
+}
+
+.job-offer-span3 {
+  animation-delay: 0.5s;
+}
+
+.job-offer-span4 {
+  animation-delay: 0.6s;
+}
+
+@keyframes Anim-TD {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-image {
+    width: 80%;
+    background-size: 90%;
+    background-position: left center;
+  }
+
+  .hero::after {
+    right: 20%;
+    width: 55%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-image {
+    width: 100%;
+    height: 600px;
+    background-size: 100%;
+    background-position: bottom center;
+  }
+
+  .hero::after {
+    right: 28%;
+    width: 70%;
+    height: 100%;
+  }
 }
