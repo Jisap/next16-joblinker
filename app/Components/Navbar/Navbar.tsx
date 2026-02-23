@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <header
       className={`
-        w-full transition-all duration-500 z-[99999]
+        w-full bg-white z-[99999] shadow-sm transition-all py-4 lg:py-4 duration-500
         ${isFixed
           ? "fixed top-0 left-0 bg-white/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.08)] py-3 fixed-nav"
           : "absolute top-0 left-0 bg-white py-4 lg:py-5 shadow-sm"
@@ -146,7 +146,7 @@ const Navbar = () => {
           <Link href="/UI-Components/Signup" className="hidden lg:block relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-prim to-black rounded-full blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
             <button className="relative bg-prim text-white rounded-full font-bold px-7 py-2.5 hover:bg-black transition-all duration-300 transform group-hover:-translate-y-0.5 shadow-lg shadow-prim/30 flex items-center gap-2">
-              Sign Up
+              Sign In
               <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
             </button>
           </Link>
@@ -185,7 +185,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-2xl overflow-hidden absolute w-full left-0 top-[100%] origin-top z-[99998]"
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-2xl overflow-hidden absolute w-full left-0 top-full origin-top z-[99998]"
           >
             <div className="px-[5%] py-6 flex flex-col gap-3 max-h-[80vh] overflow-y-auto custom-scrollbar pb-10">
               {navLinks.map((link, idx) => {
@@ -267,7 +267,7 @@ const Navbar = () => {
               >
                 <Link href="/UI-Components/Signup" className="block">
                   <button className="w-full bg-black text-white rounded-xl font-bold px-5 py-4 hover:bg-prim transition-all duration-300 shadow-xl shadow-black/10 flex justify-center items-center gap-2">
-                    Sign Up Now
+                    Sign In Now
                     <i className="ri-user-add-line"></i>
                   </button>
                 </Link>
