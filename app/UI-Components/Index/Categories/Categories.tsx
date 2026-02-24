@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
 import "swiper/css"
@@ -16,6 +15,7 @@ import SCIcon7 from "@/public/Images/SC-Icon7.svg"
 import SCIcon8 from "@/public/Images/SC-Icon8.svg"
 import SCIcon9 from "@/public/Images/SC-Icon9.svg"
 import SCIcon10 from "@/public/Images/SC-Icon10.svg"
+import { SectionHeader } from "@/app/Components/SectionHeader"
 
 type CategoryType = {
   image: StaticImageData
@@ -81,26 +81,11 @@ const Categories = () => {
   return (
     <>
       <div className="px-[8%] lg:px-[16%] py-15">
-        <div className="w-full flex flex-col md:flex-row gap-5">
-          <div className="w-full lg:w-1/2">
-            <div className="title">
-              <h2 className="Unbounded text-4xl">Search by Category</h2>
-
-              <p className="text-gray-400 mt-2">
-                Explore Exciting Opportunities in the Digital World
-              </p>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2 flex justify-start md:justify-end">
-            <Link href="/UI-Components/Jobs" className="flex items-center gap-2">
-              <span className="px-3 py-2 border border-gray-400 rounded-md hover:bg-prim hover:shadow-light hover:border-transparent transition-all duration-300">
-                All Categories
-              </span>
-              <i className="bi bi-arrow-right"></i>
-            </Link>
-          </div>
-        </div>
+        <SectionHeader
+          title="Search by Category"
+          text="Explore Exciting Opportunities in the Digital World"
+          linkText="All Categories"
+        />
 
         <div className="mt-15">
           <Swiper
