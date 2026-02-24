@@ -122,7 +122,7 @@ const JobDetails = () => {
             </div>
 
             <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5">
+              <div className="grid grid-cols-1 gap-5">
                 <div className="shadow-light rounded-2xl p-4">
                   <div className="my-5">
                     <h2 className="Unmbounded text-gray-400">
