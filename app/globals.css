@@ -16,6 +16,7 @@
   --duration-slow: 0.5s;
 }
 
+
 .Unbounded {
   font-family: var(--font-unbounded);
 }
@@ -149,4 +150,8 @@ body {
     width: 70%;
     height: 100%;
   }
+}
+
+.shadow-light {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

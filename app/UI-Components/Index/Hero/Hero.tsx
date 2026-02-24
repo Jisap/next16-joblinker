@@ -5,7 +5,6 @@ import Link from "next/link"
 import hand from "@/public/Images/hand.svg"
 import { useState } from "react"
 
-
 const Hero = () => {
 
   const [selected, setSelected] = useState("Select a job");
@@ -110,7 +109,7 @@ const Hero = () => {
               </div>
 
               {/* tarjeta1 */}
-              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[10%] sm:top-[40%] -left-7 md:left-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[5%] sm:top-[40%] -left-7 md:left-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
                 <h2 className="text-2xl font-semibold text-prim">
                   <span className="text-5xl Merienda pr-2">25</span>Job Offers
                 </h2>
@@ -120,7 +119,7 @@ const Hero = () => {
                 </p>
               </div>
               {/* tarjeta2 */}
-              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[28%] sm:top-[45%] -right-7 md:right-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
+              <div className="job-offer-span1 flex flex-col gap-2 absolute top-[20%] sm:top-[45%] -right-7 md:right-0 text-black px-5 py-2 rounded-2xl shadow-md shadow-white bg-white">
                 <h2 className="text-2xl font-semibold text-prim">
                   <span className="text-5xl Merienda pr-2">20</span>Job Offers
                 </h2>
