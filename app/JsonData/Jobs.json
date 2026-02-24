@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Yata",
+    "name": "Nuclear Power Engineer",
+    "location": "Pereira",
+    "tag": "React",
+    "image": "/Images/job-1.webp",
+    "days": "7 days ago",
+    "price": "$53k"
+  },
+  {
+    "id": "2",
+    "title": "Blognation",
+    "location": "Solna",
+    "name": "Technical Writer",
+    "tag": "Trending",
+    "image": "/Images/job-2.webp",
+    "days": "12 days ago",
+    "price": "$20k"
+  },
+  {
+    "id": "3",
+    "title": "Mynte",
+    "location": "Minchinābād",
+    "name": "Professor",
+    "tag": "Trending",
+    "image": "/Images/job-3.webp",
+    "days": "10 days ago",
+    "price": "$27k"
+  },
+  {
+    "id": "4",
+    "title": "Voonder",
+    "location": "Obrenovac",
+    "name": "Financial Advisor",
+    "tag": "Wordpress",
+    "image": "/Images/job-4.webp",
+    "days": "21 days ago",
+    "price": "$22k"
+  },
+  {
+    "id": "5",
+    "title": "Abata",
+    "location": "Solna",
+    "name": "Associate Professor",
+    "tag": "Marketing",
+    "image": "/Images/job-5.webp",
+    "days": "15 days ago",
+    "price": "$34k"
+  },
+  {
+    "id": "6",
+    "title": "Linktype",
+    "location": "Palhoça",
+    "name": "GIS Technical Architect",
+    "tag": "Marketing",
+    "image": "/Images/job-6.webp",
+    "days": "9 days ago",
+    "price": "$18k"
+  },
+  {
+    "id": "7",
+    "title": "Devify",
+    "location": "Neikeng",
+    "name": "Electrical Engineer",
+    "tag": "Trending",
+    "image": "/Images/job-7.webp",
+    "days": "2 days ago",
+    "price": "$32k"
+  },
+  {
+    "id": "8",
+    "title": "Eimbee",
+    "location": "Neikeng",
+    "name": "Assistant Media Planner",
+    "tag": "Design",
+    "image": "/Images/job-8.webp",
+    "days": "5 days ago",
+    "price": "$38k"
+  },
+  {
+    "id": "9",
+    "title": "Jazzy",
+    "location": "Glendale",
+    "name": "Environment Specialist",
+    "tag": "App",
+    "image": "/Images/job-9.webp",
+    "days": "18 days ago",
+    "price": "$19k"
+  },
+  {
+    "id": "10",
+    "title": "Jamia",
+    "location": "Oka",
+    "name": "Associate Professor",
+    "tag": "React",
+    "image": "/Images/job-10.webp",
+    "days": "2 days ago",
+    "price": "$25k"
+  }
+]
