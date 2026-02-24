@@ -68,7 +68,7 @@ const JobDetails = () => {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col lg:flex-row gap-5 justify-between">
+          <div className="mt-10 flex flex-col lg:flex-row gap-10 justify-between">
             <div className="w-full lg:w-1/1">
               <h2 className="Unbounded text-xl my-8">
                 Overview
@@ -119,6 +119,123 @@ const JobDetails = () => {
                   Apply Now
                 </Link>
               </button>
+            </div>
+
+            <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5">
+                <div className="shadow-light rounded-2xl p-4">
+                  <div className="my-5">
+                    <h2 className="Unmbounded text-gray-400">
+                      Experience
+                    </h2>
+
+                    <p className="Unbounded font-light text-xl">
+                      2-3 Years
+                    </p>
+                  </div>
+
+                  <div className="my-5">
+                    <h2 className="Unmbounded text-gray-400">
+                      Work Level
+                    </h2>
+
+                    <p className="Unbounded font-light text-xl">
+                      Mid-Level
+                    </p>
+                  </div>
+
+                  <div className="my-5">
+                    <h2 className="Unmbounded text-gray-400">
+                      Employment Type
+                    </h2>
+
+                    <p className="Unbounded font-light text-xl">
+                      Full-Time
+                    </p>
+                  </div>
+
+                  <div className="my-5">
+                    <h2 className="Unmbounded text-gray-400">
+                      Salary
+                    </h2>
+
+                    <p className="Unbounded font-light text-xl">
+                      50k - 60k / Yearly
+                    </p>
+                  </div>
+
+                  <div className="shadow-light rounded-2xl p-4">
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src={job.image}
+                        alt={job.name}
+                        width={100}
+                        height={100}
+                        className="rounded-xl bg-white object-cover border-3 border-white"
+                      />
+
+                      <div className="flex flex-col gap-1">
+                        <h5 className="Unbounded">
+                          {job.title}
+                        </h5>
+
+                        <p className="text-gray-300">
+                          <i className="bi bi-geo-alt"> {job.location}</i>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="my-5">
+                      <h2 className="Unmbounded text-gray-400">
+                        Industry
+                      </h2>
+
+                      <p className="Unbounded font-light text-xl">
+                        Finance
+                      </p>
+                    </div>
+
+                    <div className="my-5">
+                      <h2 className="Unmbounded text-gray-400">
+                        Company Size
+                      </h2>
+
+                      <p className="Unbounded font-light text-xl">
+                        219 employees
+                      </p>
+                    </div>
+
+                    <div className="my-5">
+                      <h2 className="Unmbounded text-gray-400">
+                        Founded in
+                      </h2>
+
+                      <p className="Unbounded font-light text-xl">
+                        2018
+                      </p>
+                    </div>
+
+                    <div className="my-5">
+                      <h2 className="Unmbounded text-gray-400 text-sm">
+                        Location
+                      </h2>
+
+                      <p className="Unbounded font-light text-xl">
+                        {job.location}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="my-6">
+                    <div className="my-5 flex items-center gap-3">
+                      <i className="bi bi-facebook border rounded-full px-2 py-1 text-2xl text-gray-400 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-pointer"></i>
+                      <i className="bi bi-twitter border rounded-full px-2 py-1 text-2xl text-gray-400 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-pointer"></i>
+                      <i className="bi bi-instagram border rounded-full px-2 py-1 text-2xl text-gray-400 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-pointer"></i>
+                      <i className="bi bi-linkedin border rounded-full px-2 py-1 text-2xl text-gray-400 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-pointer"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
