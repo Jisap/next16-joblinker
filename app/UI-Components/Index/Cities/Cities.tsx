@@ -24,7 +24,7 @@ const Cities = () => {
           {
             Citiesdata.map((item) => (
               <div key={item.id}>
-                <div className="flex flex-col justify-center items-center text-center p-5 shadow-light rounded-2xl gap-2 group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                <div className="h-full flex flex-col justify-center items-center text-center p-5 shadow-light rounded-2xl gap-2 group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                   <Image
                     src={item.image}
                     alt=""
