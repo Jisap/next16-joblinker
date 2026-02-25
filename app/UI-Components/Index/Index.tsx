@@ -4,6 +4,7 @@ import Categories from './Categories/Categories'
 import JobOffers from './Job-Offers/JobOffers'
 import WhyChooseUs from './WhyChooseUs/WhyChooseUs'
 import Banner from './Banner/Banner'
+import Cities from './Cities/Cities'
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <JobOffers />
       <WhyChooseUs />
       <Banner />
+      <Cities />
     </>
   )
 }

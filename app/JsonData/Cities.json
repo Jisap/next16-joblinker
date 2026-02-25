@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "San Francisco",
+    "positions": "6 Open Positions",
+    "image": "/Images/Cities-1.webp"
+  },
+  {
+    "id": "2",
+    "name": "Seattle",
+    "positions": "5 Open Positions",
+    "image": "/Images/Cities-2.webp"
+  },
+  {
+    "id": "3",
+    "name": "Austin",
+    "positions": "4 Open Positions",
+    "image": "/Images/Cities-3.webp"
+  },
+  {
+    "id": "4",
+    "name": "New York",
+    "positions": "5 Open Positions",
+    "image": "/Images/Cities-4.webp"
+  },
+  {
+    "id": "5",
+    "name": "Boston",
+    "positions": "3 Open Positions",
+    "image": "/Images/Cities-5.webp"
+  },
+  {
+    "id": "6",
+    "name": "San Jose",
+    "positions": "6 Open Positions",
+    "image": "/Images/Cities-6.webp"
+  },
+  {
+    "id": "7",
+    "name": "Raleigh, Nort",
+    "positions": "5 Open Positions",
+    "image": "/Images/Cities-7.webp"
+  },
+  {
+    "id": "8",
+    "name": "Washington",
+    "positions": "4 Open Positions",
+    "image": "/Images/Cities-8.webp"
+  },
+  {
+    "id": "9",
+    "name": "Denver",
+    "positions": "3 Open Positions",
+    "image": "/Images/Cities-9.webp"
+  },
+  {
+    "id": "10",
+    "name": "Chicago",
+    "positions": "4 Open Positions",
+    "image": "/Images/Cities-10.webp"
+  },
+  {
+    "id": "11",
+    "name": "Los Angeles",
+    "positions": "6 Open Positions",
+    "image": "/Images/Cities-11.webp"
+  },
+  {
+    "id": "12",
+    "name": "Atlanta",
+    "positions": "5 Open Positions",
+    "image": "/Images/Cities-12.webp"
+  }
+]
