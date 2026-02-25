@@ -3,6 +3,7 @@ import Hero from './Hero/Hero'
 import Categories from './Categories/Categories'
 import JobOffers from './Job-Offers/JobOffers'
 import WhyChooseUs from './WhyChooseUs/WhyChooseUs'
+import Banner from './Banner/Banner'
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <Categories />
       <JobOffers />
       <WhyChooseUs />
+      <Banner />
     </>
   )
 }
