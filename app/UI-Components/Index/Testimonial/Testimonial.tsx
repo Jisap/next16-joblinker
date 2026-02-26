@@ -3,83 +3,143 @@
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
+import { motion, AnimatePresence } from "framer-motion"
+import { useRef, useState } from "react"
 import "swiper/css"
 
+// Importaciones 
 import Candidat1 from "@/public/Images/Candidat-1.webp"
 import Candidat2 from "@/public/Images/Candidat-2.webp"
 import Candidat3 from "@/public/Images/Candidat-3.webp"
 import Candidat4 from "@/public/Images/Candidat-4.webp"
 import Candidat5 from "@/public/Images/Candidat-5.webp"
 import Candidat6 from "@/public/Images/Candidat-6.webp"
-import Candidat7 from "@/public/Images/Candidat-7.webp"
 import Candidat8 from "@/public/Images/Candidat-8.webp"
 import Candidat9 from "@/public/Images/Candidat-9.webp"
 import Candidat10 from "@/public/Images/Candidat-10.webp"
 import Candidat11 from "@/public/Images/Candidat-11.webp"
-import Candidat12 from "@/public/Images/Candidat-12.webp"
-import { useRef } from "react"
 
-
-const testimonial = [
+const testimonials = [
   {
     img: Candidat1,
     name: "Jenny Missy",
     role: "Web Developer",
-    pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    content: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
   },
   {
     img: Candidat2,
-    name: "Jenny Missy",
-    role: "Web Developer",
-    pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    name: "Alex Rivera",
+    role: "UI Designer",
+    content: "The attention to detail and creative approach from the team has been exceptional. I've seen a 40% increase in user engagement since we launched our new platform."
   },
   {
     img: Candidat3,
-    name: "Jenny Missy",
-    role: "Web Developer",
-    pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    name: "Sarah Chen",
+    role: "Project Manager",
+    content: "Working with this agency has been a game-changer. They don't just deliver code; they deliver strategic solutions that solve real business problems."
   },
   {
     img: Candidat4,
-    name: "Jenny Missy",
-    role: "Web Developer",
-    pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    name: "Michael Ross",
+    role: "Marketing Director",
+    content: "Professionalism at its finest. They understood our brand vision perfectly and translated it into a digital experience that our customers love."
   },
   {
     img: Candidat5,
-    name: "Jenny Missy",
-    role: "Web Developer",
-    pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    name: "Elena Gomez",
+    role: "Fullstack Dev",
+    content: "Clean code, modern architecture, and a focus on performance. It's rare to find a team that prioritizes quality as much as they do."
   },
   {
     img: Candidat6,
-    name: "Jenny Missy",
-    role: "Web Developer",
-    pere: "Each day, I’m inspired by my colleagues to drive innovation that accomplishes this. Jobster fosters an environment of trust and support where I can drive customer success."
+    name: "David Smith",
+    role: "Product Owner",
+    content: "Their dedication to customer success is evident in every interaction. We feel truly supported and confident in our digital strategy."
   },
 ]
 
-
 const Testimonial = () => {
-
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   return (
-    <>
-      <div className='px-[8%] lg:px-[12%] py-15'>
-        <div className="testimonial relative">
+    <section className='relative px-[8%] lg:px-[12%] py-24 overflow-hidden bg-[#0a0a0a] text-white group'>
+
+      {/* --- CÍRCULOS CONCÉNTRICOS ANIMADOS --- */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        {[1, 2, 3].map((circle) => (
+          <motion.div
+            key={circle}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{
+              opacity: [0.1, 0.15, 0.1],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              delay: circle * 2,
+              ease: "easeInOut"
+            }}
+            className="absolute border border-white/20 rounded-full"
+            style={{
+              width: `${circle * 25}%`,
+              aspectRatio: "1/1",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* --- IMÁGENES FLOTANTES DECORATIVAS --- */}
+      <div className="hidden md:block">
+        {[
+          { img: Candidat8, pos: "top-20 left-10", delay: 0 },
+          { img: Candidat9, pos: "bottom-40 left-20", delay: 1 },
+          { img: Candidat10, pos: "bottom-20 right-20", delay: 2 },
+          { img: Candidat11, pos: "top-40 right-10", delay: 3 },
+        ].map((item, idx) => (
+          <motion.div
+            key={idx}
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, delay: item.delay, ease: "easeInOut" }}
+            className={`absolute ${item.pos} z-10`}
+          >
+            <div className="relative p-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+              <Image src={item.img} alt="decor" width={60} height={60} className="rounded-full grayscale hover:grayscale-0 transition-all duration-500" />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="relative z-20">
+        <div className="text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="Unbounded text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-white to-white/40 bg-clip-text text-transparent"
+          >
+            Why Our Clients <span className="text-blue-400">Admire</span> Us
+          </motion.h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed text-balance">
+            Testimonials that showcase our exceptional service and dedication to your success.
+          </p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-4xl mx-auto relative px-10 md:px-0"
+        >
           <Swiper
-            spaceBetween={20}
+            spaceBetween={50}
             slidesPerView={1}
             loop={true}
-            autoplay={{
-              delay: 2500
-            }}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
+            observer={true}
+            observeParents={true}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
             onBeforeInit={(swiper) => {
               // @ts-ignore
               swiper.params.navigation.prevEl = prevRef.current;
@@ -87,94 +147,55 @@ const Testimonial = () => {
               swiper.params.navigation.nextEl = nextRef.current;
             }}
             modules={[Autoplay, Navigation]}
+            className="rounded-3xl border border-white/10 bg-white/3 backdrop-blur-xl shadow-2xl"
           >
-            {testimonial.map((item, index) => (
+            {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="text-center px-4 relative">
-                  <div className="border border-gray-600/50 rounded-2xl py-10 md:py-20">
-                    <h2 className="Unbounded text-3xl mb-2">
-                      Why Our Clients Admire Us
-                    </h2>
-
-                    <p className="text-gray-300 mb-10">
-                      Testimonials that Showcase our Exceptional Service and Dedication
-                    </p>
-
-                    <div className="testimonial-content flex flex-col items-center justify-center">
-                      <Image
-                        src={item.img}
-                        alt={item.name}
-                        className="rounded-full object-cover"
-                      />
-
-                      <p className="text-gray-300 w-[90%] lg:w-[60%] leading-loose text-lg mb-3">
-                        {item.pere}
-                      </p>
-
-                      <h3 className="font-semibold Unbounded text-xl">
-                        {item.name}
-                      </h3>
-
-                      <p className="text-gray-400 mb-3">
-                        {item.role}
-                      </p>
-
-                      <div className="testi-star flex gap-2 items-center justify-center">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                      </div>
+                <div className="flex flex-col items-center p-8 md:p-16 text-center">
+                  {/* Imagen Central con Glint/Brillo */}
+                  <div className="relative mb-8">
+                    <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
+                    <Image
+                      src={item.img}
+                      alt={item.name}
+                      width={120}
+                      height={120}
+                      className="rounded-full border-4 border-white/10 relative z-10 object-cover shadow-2xl"
+                    />
+                    <div className="absolute -bottom-2 -right-2 bg-blue-500 p-2 rounded-full z-20 shadow-lg">
+                      <i className="bi bi-quote text-white text-xl"></i>
                     </div>
+                  </div>
+
+                  <p className="text-xl md:text-2xl text-gray-200 font-light italic leading-relaxed mb-8 max-w-2xl">
+                    "{item.content}"
+                  </p>
+
+                  <div>
+                    <h3 className="Unbounded text-xl font-semibold text-white">{item.name}</h3>
+                    <p className="text-blue-400 font-medium uppercase tracking-wider text-sm mt-1">{item.role}</p>
+                  </div>
+
+                  <div className="flex gap-1 mt-6">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <i key={s} className="bi bi-star-fill text-yellow-500 text-sm"></i>
+                    ))}
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          <Image
-            src={Candidat8}
-            alt="candidat8"
-            width={80}
-            height={80}
-            className="border border-gray-700/70 rounded-full p-4 bg-gray-800/60 absolute top-20 left-20 hidden md:block"
-          />
-
-          <Image
-            src={Candidat9}
-            alt="candidat9"
-            width={80}
-            height={80}
-            className="border border-gray-700/70 rounded-full p-4 bg-gray-800/60 absolute top-100 left-30 hidden md:block"
-          />
-
-          <Image
-            src={Candidat10}
-            alt="candidat10"
-            width={80}
-            height={80}
-            className="border border-gray-700/70 rounded-full p-4 bg-gray-800/60 absolute top-120 md:top-100 right-30 hidden md:block"
-          />
-
-          <Image
-            src={Candidat11}
-            alt="candidat11"
-            width={80}
-            height={80}
-            className="border border-gray-700/70 rounded-full p-4 bg-gray-800/60 absolute top-20 right-15 lg:right-30 hidden md:block"
-          />
-
-          <div ref={prevRef} className="swiper-btn arrow-left border z-50 absolute top-[35%] lg:top-[30%] left-15 md:left-30 lg:left-50 px-4 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-            <i className="bi bi-arrow-left"></i>
-          </div>
-
-          <div ref={nextRef} className="swiper-btn arrow-right border z-50 absolute top-[35%] lg:top-[30%] right-15 md:right-30 lg:right-50 px-4 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-            <i className="bi bi-arrow-right"></i>
-          </div>
-        </div>
+          {/* Botones de Navegación Custom */}
+          <button ref={prevRef} className="absolute left-[-20px] md:left-[-70px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white hover:text-black transition-all z-30 opacity-0 group-hover:opacity-100 shadow-xl">
+            <i className="bi bi-chevron-left text-2xl"></i>
+          </button>
+          <button ref={nextRef} className="absolute right-[-20px] md:right-[-70px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white hover:text-black transition-all z-30 opacity-0 group-hover:opacity-100 shadow-xl">
+            <i className="bi bi-chevron-right text-2xl"></i>
+          </button>
+        </motion.div>
       </div>
-    </>
+    </section>
   )
 }
 
