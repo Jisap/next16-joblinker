@@ -191,3 +191,10 @@ body {
   background-size: 50%;
   z-index: -1;
 }
+
+.testimonial {
+  background-image: url(/Images/testi-bg.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
