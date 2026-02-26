@@ -59,13 +59,15 @@ const testimonials = [
 ]
 
 const Testimonial = () => {
-  const prevRef = useRef(null)
-  const nextRef = useRef(null)
+  const prevRef = useRef<HTMLButtonElement>(null)
+  const nextRef = useRef<HTMLButtonElement>(null)
+  const [_, setInit] = useState(false)
 
   return (
     <section className='relative px-[8%] lg:px-[12%] py-24 overflow-hidden bg-[#0a0a0a] text-white group'>
+      {/* ... círculos y fotos flotantes ... */}
 
-      {/* --- CÍRCULOS CONCÉNTRICOS ANIMADOS --- */}
+      {/* bloque de círculos y fotos  */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         {[1, 2, 3].map((circle) => (
           <motion.div
@@ -90,7 +92,6 @@ const Testimonial = () => {
         ))}
       </div>
 
-      {/* --- IMÁGENES FLOTANTES DECORATIVAS --- */}
       <div className="hidden md:block">
         {[
           { img: Candidat8, pos: "top-20 left-10", delay: 0 },
@@ -136,23 +137,18 @@ const Testimonial = () => {
             spaceBetween={50}
             slidesPerView={1}
             loop={true}
-            observer={true}
-            observeParents={true}
+            onInit={() => setInit(true)}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
-            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-            onBeforeInit={(swiper) => {
-              // @ts-ignore
-              swiper.params.navigation.prevEl = prevRef.current;
-              // @ts-ignore
-              swiper.params.navigation.nextEl = nextRef.current;
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
             }}
             modules={[Autoplay, Navigation]}
-            className="rounded-3xl border border-white/10 bg-white/3 backdrop-blur-xl shadow-2xl"
+            className="rounded-3xl border border-white/10 bg-white/3 backdrop-blur-xl shadow-2xl relative z-10"
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center p-8 md:p-16 text-center">
-                  {/* Imagen Central con Glint/Brillo */}
                   <div className="relative mb-8">
                     <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
                     <Image
@@ -186,11 +182,16 @@ const Testimonial = () => {
             ))}
           </Swiper>
 
-          {/* Botones de Navegación Custom */}
-          <button ref={prevRef} className="absolute left-[-20px] md:left-[-70px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white hover:text-black transition-all z-30 opacity-0 group-hover:opacity-100 shadow-xl">
+          <button
+            ref={prevRef}
+            className="absolute left-[-20px] md:left-[-70px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white hover:text-black transition-all z-50 opacity-0 group-hover:opacity-100 shadow-xl cursor-pointer"
+          >
             <i className="bi bi-chevron-left text-2xl"></i>
           </button>
-          <button ref={nextRef} className="absolute right-[-20px] md:right-[-70px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white hover:text-black transition-all z-30 opacity-0 group-hover:opacity-100 shadow-xl">
+          <button
+            ref={nextRef}
+            className="absolute right-[-20px] md:right-[-70px] top-1/2 -translate-y-1/2 w-14 h-14 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center hover:bg-white hover:text-black transition-all z-50 opacity-0 group-hover:opacity-100 shadow-xl cursor-pointer"
+          >
             <i className="bi bi-chevron-right text-2xl"></i>
           </button>
         </motion.div>
