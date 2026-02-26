@@ -8,6 +8,7 @@ import Cities from './Cities/Cities'
 import Testimonial from './Testimonial/Testimonial'
 import Partners from './Partners/Partners'
 import Blog from './Blog/Blog'
+import Newsletter from './Newsletter/Newsletter'
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <Testimonial />
       <Partners />
       <Blog />
+      <Newsletter />
     </>
   )
 }

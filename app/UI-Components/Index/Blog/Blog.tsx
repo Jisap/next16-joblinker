@@ -10,7 +10,7 @@ import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants"
 const Blog = () => {
   return (
     <>
-      <div className="px-[8%] lg:px-[16%] py-15">
+      <div className="px-[8%] lg:px-[16%] py-20">
         <motion.div
           variants={staggerContainer(0.1, 0.1)}
           initial="hidden"

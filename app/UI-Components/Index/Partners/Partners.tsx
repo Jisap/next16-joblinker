@@ -64,7 +64,7 @@ const CountData = [
 const Partners = () => {
   return (
     <>
-      <div className="px-[8%] lg:px-[16%] py-16">
+      <div className="px-[8%] lg:px-[16%] py-20">
         <motion.div
           variants={staggerContainer(0.2, 0.1)}
           initial="hidden"

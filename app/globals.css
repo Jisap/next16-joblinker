@@ -198,3 +198,35 @@ body {
   background-position: center center;
   background-size: cover;
 }
+
+.newsletter {
+  background-image: radial-gradient(circle, #5118bf, #350e7c, #16063a);
+  position: relative;
+  z-index: 5;
+}
+
+.newsletter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(/Images/newsletter-bg.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(/Images/newsletter-bg.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
