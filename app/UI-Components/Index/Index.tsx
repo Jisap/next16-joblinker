@@ -7,6 +7,7 @@ import Banner from './Banner/Banner'
 import Cities from './Cities/Cities'
 import Testimonial from './Testimonial/Testimonial'
 import Partners from './Partners/Partners'
+import Blog from './Blog/Blog'
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Cities />
       <Testimonial />
       <Partners />
+      <Blog />
     </>
   )
 }

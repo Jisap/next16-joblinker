@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "image": "/Images/Blog-1.webp",
+    "detailImg": "/blog-detail-1.jpg",
+    "tag": "Technology",
+    "date": "2025-01-05",
+    "title": "Top 10 In-Demand Web Techology Jobs of 2025",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+  },
+  {
+    "id": "2",
+    "image": "/Images/Blog-2.webp",
+    "detailImg": "/blog-detail-2.jpg",
+    "tag": "Career Advice",
+    "date": "2025-02-10",
+    "title": "The Art of Writing an Effective Cover Letter",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+  },
+  {
+    "id": "3",
+    "image": "/Images/Blog-3.webp",
+    "detailImg": "/blog-detail-3.jpg",
+    "tag": "Career Advice",
+    "date": "2025-03-15",
+    "title": "Mastering the Job Interview: Essential Tips for Success",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+  },
+  {
+    "id": "4",
+    "image": "/Images/Blog-4.webp",
+    "detailImg": "/blog-detail-4.jpg",
+    "tag": "Workplace Trends",
+    "date": "2025-04-20",
+    "title": "The Rise of Remote Work and its Benefits",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+  },
+  {
+    "id": "5",
+    "image": "/Images/Blog-5.webp",
+    "detailImg": "/blog-detail-5.jpg",
+    "tag": "Sales and Marketing",
+    "date": "2025-05-12",
+    "title": "Exploring Careers in Digital Marketing",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+  },
+  {
+    "id": "6",
+    "image": "/Images/Blog-2.webp",
+    "detailImg": "/blog-detail-2.jpg",
+    "tag": "Healthcare",
+    "date": "2025-06-18",
+    "title": "The Impact of Artificial Intelligence in Healthcare",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis."
+  },
+  {
+    "id": "7",
+    "image": "/Images/Blog-3.webp",
+    "detailImg": "/blog-detail-3.jpg",
+    "tag": "Artificial Intelligence",
+    "date": "2025-07-08",
+    "title": "How AI is Revolutionizing Front-End Development",
+    "desc": "From smart code suggestions to automated testing, AI tools are reshaping how developers build and optimize modern websites."
+  },
+  {
+    "id": "8",
+    "image": "/Images/Blog-4.webp",
+    "detailImg": "/blog-detail-4.jpg",
+    "tag": "Productivity",
+    "date": "2025-08-14",
+    "title": "Balancing Work and Life in a Hybrid Environment",
+    "desc": "Learn how professionals are maintaining productivity and mental wellness while working in hybrid office setups."
+  },
+  {
+    "id": "9",
+    "image": "/Images/Blog-5.webp",
+    "detailImg": "/blog-detail-5.jpg",
+    "tag": "Freelancing",
+    "date": "2025-09-22",
+    "title": "Essential Skills Every Freelancer Should Master in 2025",
+    "desc": "Discover the top skills that freelancers need to stay competitive—from personal branding to mastering client communication."
+  }
+]
