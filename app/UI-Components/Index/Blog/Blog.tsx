@@ -1,7 +1,9 @@
 "use client"
 
 import Image from "next/image"
+import { motion } from "framer-motion"
 import Blogs from "@/app/JsonData/Blogs.json"
+import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants"
 
 
 
@@ -9,25 +11,47 @@ const Blog = () => {
   return (
     <>
       <div className="px-[8%] lg:px-[16%] py-15">
-        <div className="flex flex-col justify-center text-center">
-          <h2 className="text-4xl Unbounded mb-2">
+        <motion.div
+          variants={staggerContainer(0.1, 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="flex flex-col justify-center text-center"
+        >
+          <motion.h2
+            variants={fadeIn("down", 0.2)}
+            className="text-4xl Unbounded mb-2"
+          >
             Exploring the World of Knowledge
-          </h2>
+          </motion.h2>
 
-          <p className="text-gray-400 mb-19 ">
+          <motion.p
+            variants={fadeIn("up", 0.2)}
+            className="text-gray-400 mb-19 "
+          >
             Unleash Your Curiosity with Enganging Articles, Expert Opinions, and Inspiring Stories.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <motion.div
+          variants={staggerContainer(0.2, 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
           {Blogs.slice(0, 3).map((blog, index) => (
-            <div key={index} className="flex flex-col shadow shadow-white/550 rounded-2xl group cursor-pointer">
+            <motion.div
+              key={index}
+              variants={fadeIn("up", 0.2)}
+              className="flex flex-col shadow shadow-white/550 rounded-2xl group cursor-pointer h-full"
+            >
               <Image
                 src={blog.image}
                 alt={blog.title}
                 width={500}
                 height={500}
-                className="w-full h-full object-contain rounded-2xl opacity-70 group-hover:opacity-100 transition-all duration-300"
+                className="w-full h-64 object-cover rounded-t-2xl opacity-70 group-hover:opacity-100 transition-all duration-300"
               />
 
               <div className="p-3 mt-3">
@@ -45,9 +69,9 @@ const Blog = () => {
                   {blog.title}
                 </h2>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </>
   )
