@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react"
 import jobsData from "@/app/JsonData/Jobs.json"
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants";
 
 
 
@@ -114,7 +116,13 @@ const Jobs = () => {
   return (
     <>
       {/* Banner */}
-      <div className="section-banner px-[8%] lg:px-[16%] h-[350px] relative w-full flex flex-col justify-center items-center mt-20">
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="section-banner px-[8%] lg:px-[16%] h-[350px] relative w-full flex flex-col justify-center items-center mt-20"
+      >
         <h2 className="Unbounded text-4xl mb-3">
           Find Jobs
         </h2>
@@ -122,11 +130,17 @@ const Jobs = () => {
         <p className="text-gray-400">
           Search your career opportunity jobs
         </p>
-      </div>
+      </motion.div>
 
       <div className="px-[8%] lg:px-[16%] py-10">
         {/* Encabezado */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+        <motion.div
+          variants={fadeIn("down", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8"
+        >
           <div>
             <h2 className="text-xl font-semibold">
               Show {filteredJobs.length} Jobs
@@ -158,12 +172,18 @@ const Jobs = () => {
               All
             </button>
           </div>
-        </div>
+        </motion.div>
 
 
         <div className="flex flex-col md:flex-row items-start gap-5 mb-10">
           {/* izquierda */}
-          <div className="w-full md:w-1/2 flex flex-col gap-3 md:sticky top-22 left-0 h-full">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="w-full md:w-1/2 flex flex-col gap-3 md:sticky top-22 left-0 h-full"
+          >
             {/* filtro por keyword */}
             <div className="shadow-light rounded-2xl p-4">
               <button
@@ -296,63 +316,74 @@ const Jobs = () => {
                 </div>
               )}
             </div>
-          </div>
+          </motion.div>
 
           {/* derecha - lista de trabajos */}
           <div className="w-full md:w-1/2 lg:w-1/1 flex items-end justify-center md:justify-start">
-            <div className="grid grid-cols-1 md:gird-cols-1 lg:grid-cols-2 gap-5 gap-y-8 w-full">
+            <motion.div
+              variants={staggerContainer(0.1, 0.1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid grid-cols-1 md:gird-cols-1 lg:grid-cols-2 gap-5 gap-y-8 w-full"
+            >
               {filteredJobs.length > 0 ? (
                 filteredJobs.map((job, index) => (
-                  <Link key={index} href={`/UI-Components/Jobs/jobDetails?id=${job.id}`}>
-                    <div className="job-card shadow-light cursor-pointer group hover:bg-prim transition-all duration-300 rounded-2xl px-8 py-5">
-                      <div className="flex items-center gap-3">
-                        <Image
-                          src={job.image}
-                          alt={job.title}
-                          width={100}
-                          height={100}
-                        />
+                  <motion.div
+                    key={index}
+                    variants={fadeIn("up", 0.1 * index)} // Manual stagger if container doesn't work as expected with keys, but variants are inherited
+                  >
+                    <Link href={`/UI-Components/Jobs/jobDetails?id=${job.id}`}>
+                      <div className="job-card shadow-light cursor-pointer group hover:bg-prim transition-all duration-300 rounded-2xl px-8 py-5">
+                        <div className="flex items-center gap-3">
+                          <Image
+                            src={job.image}
+                            alt={job.title}
+                            width={100}
+                            height={100}
+                          />
 
-                        <div className="flex flex-col gap-1">
-                          <h5 className="Unbounded">
-                            {job.title}
-                          </h5>
+                          <div className="flex flex-col gap-1">
+                            <h5 className="Unbounded">
+                              {job.title}
+                            </h5>
 
+                            <p>
+                              <i className="bi bi-geo-alt"></i>
+                              {job.location}
+                            </p>
+                          </div>
+                        </div>
+
+                        <h2 className="Unbounded text-2xl my-4">
+                          {job.name}
+                        </h2>
+
+                        <span className="bg-white font-medium px-4 py-[4px] rounded-full text-prim">
+                          {job.tag}
+                        </span>
+
+                        <div className="flex justify-between gap-3 mt-5">
                           <p>
-                            <i className="bi bi-geo-alt"></i>
-                            {job.location}
+                            <i className="bi bi-clock-history"></i>
+                            {job.days}
                           </p>
+
+                          <h3 className="Unbounded">
+                            {job.price}{" "}
+                            <span className="text-gray-400">/ Yearly</span>
+                          </h3>
                         </div>
                       </div>
-
-                      <h2 className="Unbounded text-2xl my-4">
-                        {job.name}
-                      </h2>
-
-                      <span className="bg-white font-medium px-4 py-[4px] rounded-full text-prim">
-                        {job.tag}
-                      </span>
-
-                      <div className="flex justify-between gap-3 mt-5">
-                        <p>
-                          <i className="bi bi-clock-history"></i>
-                          {job.days}
-                        </p>
-
-                        <h3 className="Unbounded">
-                          {job.price}{" "}
-                          <span className="text-gray-400">/ Yearly</span>
-                        </h3>
-                      </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </motion.div>
                 ))
               ) : (
                 <p className="text-gray-400 text-center col-span-2">
                   No Jobs Found matching your filters
                 </p>
               )}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
