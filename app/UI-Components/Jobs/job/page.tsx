@@ -72,10 +72,10 @@ const Jobs = () => {
 
     // 6. Ordenamiento (Sorting)
     // Utiliza la variable de estado 'sortOrder' (que está fuera del scope de los argumentos de esta función).
-    if (sortOrder === "newest") {
+    if (sortOrder === "Newest") {
       // Ordena comparando cadenas (lexicográficamente) de forma ascendente.
       filtered.sort((a, b) => a.days.localeCompare(b.days));
-    } else if (sortOrder === "oldest") {
+    } else if (sortOrder === "Oldest") {
       // Ordena comparando cadenas de forma descendente.
       filtered.sort((a, b) => b.days.localeCompare(a.days));
     }
@@ -182,7 +182,7 @@ const Jobs = () => {
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         const value = e.target.value
                         setKeyword(value)
-                        filterJobs(value, location, dateFilter, selectedTag)
+                        filterJobs(value, location, selectedTag, dateFilter)
                       }}
                       placeholder="Job Title, Keyword"
                       className="w-full px-2 py-2 bg-gray-500/20 border text-white border-gray-500 rounded-md"
@@ -200,7 +200,7 @@ const Jobs = () => {
                       onChange={(e: ChangeEvent<HTMLInputElement>) => {
                         const value = e.target.value
                         setLocation(value)
-                        filterJobs(keyword, value, dateFilter, selectedTag)
+                        filterJobs(keyword, value, selectedTag, dateFilter)
                       }}
                       placeholder="Search By Location"
                       className="w-full px-2 py-2 bg-gray-500/20 border text-white border-gray-500 rounded-md"
@@ -237,7 +237,7 @@ const Jobs = () => {
                           checked={dateFilter === date}
                           onChange={() => {
                             setDateFilter(date)
-                            filterJobs(keyword, location, date, selectedTag)
+                            filterJobs(keyword, location, selectedTag, date)
                           }}
                         />
                         <span className="ps-2">{date}</span>
@@ -247,6 +247,102 @@ const Jobs = () => {
 
                   </div>
                 </div>
+              )}
+            </div>
+
+            <div className="shadow-light rounded-2xl p-4 mt-4">
+              <button
+                onClick={() => setShowTagSection(!showTagSection)}
+                className="flex justify-between items-center w-full text-left text-gray-300 Unbounded mb-2"
+              >
+                <span>Search By Tags</span>
+                <i className={`bi ${showTagSection ? "bi-chevron-up" : "bi-chevron-down"} text-white`}></i>
+              </button>
+
+              {showTagSection && (
+                <div className="my-5">
+                  <div className="flex flex-wrap gap-3">
+                    {[
+                      "App",
+                      "React",
+                      "Trending",
+                      "Design",
+                      "Wordpress",
+                      "Marketing"
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        onClick={() => {
+                          const newTag = selectedTag === tag ? "" : tag;
+                          setSelectedTag(newTag);
+                          filterJobs(keyword, location, newTag, dateFilter);
+                        }}
+                        className={`
+                            bg-gray-500/20 px-4 py-2 rounded-xl hover:bg-gray-600 cursor-pointer transition-all duration-300
+                            ${selectedTag === tag ? "bg-primary text-white" : ""}  
+                          `}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="w-full md:w-1/2 lg:w-1/1 flex items-end justify-center md:justify-start">
+            <div className="grid grid-cols-1 md:gird-cols-1 lg:grid-cols-2 gap-5 gap-y-8 w-full">
+              {filteredJobs.length > 0 ? (
+                filteredJobs.map((job, index) => (
+                  <Link key={index} href={`/UI-Components/Jobs/jobDetails?id=${job.id}`}>
+                    <div className="job-card shadow-light cursor-pointer group hover:bg-prim transition-all duration-300 rounded-2xl px-8 py-5">
+                      <div className="flex items-center gap-3">
+                        <Image
+                          src={job.image}
+                          alt={job.title}
+                          width={100}
+                          height={100}
+                        />
+
+                        <div className="flex flex-col gap-1">
+                          <h5 className="Unbounded">
+                            {job.title}
+                          </h5>
+
+                          <p>
+                            <i className="bi bi-geo-alt"></i>
+                            {job.location}
+                          </p>
+                        </div>
+                      </div>
+
+                      <h2 className="Unbounded text-2xl my-4">
+                        {job.name}
+                      </h2>
+
+                      <span className="bg-white font-medium px-4 py-[4px] rounded-full text-prim">
+                        {job.tag}
+                      </span>
+
+                      <div className="flex justify-between gap-3 mt-5">
+                        <p>
+                          <i className="bi bi-clock-history"></i>
+                          {job.days}
+                        </p>
+
+                        <h3 className="Unbounded">
+                          {job.price}{" "}
+                          <span className="text-gray-400">/ Yearly</span>
+                        </h3>
+                      </div>
+                    </div>
+                  </Link>
+                ))
+              ) : (
+                <p className="text-gray-400 text-center col-span-2">
+                  No Jobs Found matching your filters
+                </p>
               )}
             </div>
           </div>
