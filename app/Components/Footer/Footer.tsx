@@ -100,7 +100,7 @@ const Footer = () => {
       >
         <div className="flex justify-center items-center">
           <p className="text-gray-400 text-lg">
-            © 2025 JobsLinker. All rights reserved.
+            © 2025 <span className="text-prim">JobsLinker</span>. All rights reserved.
           </p>
         </div>
       </motion.div>
