@@ -113,6 +113,7 @@ const Jobs = () => {
 
   return (
     <>
+      {/* Banner */}
       <div className="section-banner px-[8%] lg:px-[16%] h-[350px] relative w-full flex flex-col justify-center items-center mt-20">
         <h2 className="Unbounded text-4xl mb-3">
           Find Jobs
@@ -124,6 +125,7 @@ const Jobs = () => {
       </div>
 
       <div className="px-[8%] lg:px-[16%] py-10">
+        {/* Encabezado */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
           <div>
             <h2 className="text-xl font-semibold">
@@ -158,8 +160,11 @@ const Jobs = () => {
           </div>
         </div>
 
+
         <div className="flex flex-col md:flex-row items-start gap-5 mb-10">
+          {/* izquierda */}
           <div className="w-full md:w-1/2 flex flex-col gap-3 md:sticky top-22 left-0 h-full">
+            {/* filtro por keyword */}
             <div className="shadow-light rounded-2xl p-4">
               <button
                 onClick={() => setShowKeywordSection(!showKeywordSection)}
@@ -210,6 +215,7 @@ const Jobs = () => {
               )}
             </div>
 
+            {/* filtro por fecha */}
             <div className="shadow-light rounded-2xl p-4 mt-4">
               <button
                 onClick={() => setShowDateSection(!showDateSection)}
@@ -250,6 +256,7 @@ const Jobs = () => {
               )}
             </div>
 
+            {/* filtro por tags */}
             <div className="shadow-light rounded-2xl p-4 mt-4">
               <button
                 onClick={() => setShowTagSection(!showTagSection)}
@@ -291,6 +298,7 @@ const Jobs = () => {
             </div>
           </div>
 
+          {/* derecha - lista de trabajos */}
           <div className="w-full md:w-1/2 lg:w-1/1 flex items-end justify-center md:justify-start">
             <div className="grid grid-cols-1 md:gird-cols-1 lg:grid-cols-2 gap-5 gap-y-8 w-full">
               {filteredJobs.length > 0 ? (
