@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "image": "/Images/job-1.webp",
+    "name": "Jabberbean",
+    "location": "Kuanheum",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "13 Jobs"
+  },
+  {
+    "id": "2",
+    "image": "/Images/job-2.webp",
+    "name": "Jaxbean",
+    "location": "Shibetsu",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "8 Jobs"
+  },
+  {
+    "id": "3",
+    "image": "/Images/job-3.webp",
+    "name": "Shuffledrive",
+    "location": "Limoeiro de Anadia",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "15 Jobs"
+  },
+  {
+    "id": "4",
+    "image": "/Images/job-4.webp",
+    "name": "Bubblemix",
+    "location": "Kayanza",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "7 Jobs"
+  },
+  {
+    "id": "5",
+    "image": "/Images/job-5.webp",
+    "name": "Brainlounge",
+    "location": "Perpignan",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "9 Jobs"
+  },
+  {
+    "id": "6",
+    "image": "/Images/job-6.webp",
+    "name": "Dynabox",
+    "location": "Roanne",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "5 Jobs"
+  },
+  {
+    "id": "7",
+    "image": "/Images/job-7.webp",
+    "name": "Brainlounge",
+    "location": "Lena",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "6 Jobs"
+  },
+  {
+    "id": "8",
+    "image": "/Images/job-8.webp",
+    "name": "Skajo",
+    "location": "Dębno",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "6 Jobs"
+  },
+  {
+    "id": "9",
+    "image": "/Images/job-9.webp",
+    "name": "Edgetag",
+    "location": "Salinggara",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "8 Jobs"
+  },
+  {
+    "id": "10",
+    "image": "/Images/job-10.webp",
+    "name": "Meemm",
+    "location": "Dumbéa",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "3 Jobs"
+  },
+  {
+    "id": "11",
+    "image": "/Images/job-11.webp",
+    "name": "Wordware",
+    "location": "Ticaco",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "5 Jobs"
+  },
+  {
+    "id": "12",
+    "image": "/Images/job-12.webp",
+    "name": "Skimia",
+    "location": "Limbalod",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "3 Jobs"
+  },
+  {
+    "id": "13",
+    "image": "/Images/job-13.webp",
+    "name": "Brightbean",
+    "location": "Biaoxi",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "6 Jobs"
+  },
+  {
+    "id": "14",
+    "image": "/Images/job-14.webp",
+    "name": "Meevee",
+    "location": "Kebonkaret",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "9 Jobs"
+  },
+  {
+    "id": "15",
+    "image": "/Images/job-15.webp",
+    "name": "Skiba",
+    "location": "Lingquan",
+    "desc": "The company is a technology leader, providing innovative solutions that empower businesses to thrive in the digital era, driving growth, efficiency, and customer satisfaction",
+    "jobs": "12 Jobs"
+  }
+]
