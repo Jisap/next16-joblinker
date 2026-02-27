@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 import jobsData from "@/app/JsonData/Jobs.json"
 
 
@@ -148,6 +148,107 @@ const Jobs = () => {
               <option value="Newest">Newest</option>
               <option value="Oldest">Oldest</option>
             </select>
+
+            <button
+              onClick={handleReset}
+              className="bg-prim text-white rounded-md font-bold px-5 py-2 hover:bg-white hover:text-black transition-all duration-300"
+            >
+              All
+            </button>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-start gap-5 mb-10">
+          <div className="w-full md:w-1/2 flex flex-col gap-3 md:sticky top-22 left-0 h-full">
+            <div className="shadow-light rounded-2xl p-4">
+              <button
+                onClick={() => setShowKeywordSection(!showKeywordSection)}
+                className="flex justify-between items-center w-full text-left text-gray-300 Unbounded mb-2"
+              >
+                <span>Search Filter</span>
+                <i className={`bi ${showKeywordSection ? "bi-chevron-up" : "bi-chevron-down"} text-white`}></i>
+              </button>
+
+              {showKeywordSection && (
+                <div className="transition-all duration-300 overflow-hidden">
+                  <div className="my-5">
+                    <h2 className="Unbounded text-gray-300 mb-2">
+                      Search By Keywords
+                    </h2>
+
+                    <input
+                      type="text"
+                      value={keyword}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        const value = e.target.value
+                        setKeyword(value)
+                        filterJobs(value, location, dateFilter, selectedTag)
+                      }}
+                      placeholder="Job Title, Keyword"
+                      className="w-full px-2 py-2 bg-gray-500/20 border text-white border-gray-500 rounded-md"
+                    />
+                  </div>
+
+                  <div className="my-8">
+                    <h2 className="Unbounded text-gray-300 mb-2">
+                      Location
+                    </h2>
+
+                    <input
+                      type="text"
+                      value={location}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        const value = e.target.value
+                        setLocation(value)
+                        filterJobs(keyword, value, dateFilter, selectedTag)
+                      }}
+                      placeholder="Search By Location"
+                      className="w-full px-2 py-2 bg-gray-500/20 border text-white border-gray-500 rounded-md"
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="shadow-light rounded-2xl p-4 mt-4">
+              <button
+                onClick={() => setShowDateSection(!showDateSection)}
+                className="flex justify-between items-center w-full text-left text-gray-300 Unbounded mb-2"
+              >
+                <span>Date Posted</span>
+                <i className={`bi ${showDateSection ? "bi-chevron-up" : "bi-chevron-down"} text-white`}></i>
+              </button>
+
+              {showDateSection && (
+                <div className="my-5">
+                  <div className="flex flex-col gap-2 Unbounded font-light">
+                    {[
+                      "All",
+                      "Last Hour",
+                      "Last 24 Hour",
+                      "Last 7 Days",
+                      "Last 14 Days",
+                      "Last 30 Days"
+                    ].map((date) => (
+                      <label key={date} className="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="timeFilter"
+                          checked={dateFilter === date}
+                          onChange={() => {
+                            setDateFilter(date)
+                            filterJobs(keyword, location, date, selectedTag)
+                          }}
+                        />
+                        <span className="ps-2">{date}</span>
+                      </label>
+                    ))}
+
+
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
