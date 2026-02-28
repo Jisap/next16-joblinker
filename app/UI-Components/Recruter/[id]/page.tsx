@@ -5,6 +5,7 @@ import { useParams } from "next/navigation"
 import RecruterData from "@/app/JsonData/Recruters.json"
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants";
+import Newsletter from "../../Index/Newsletter/Newsletter";
 
 const Gallerys = [
   "/Images/Recruter-gallery1.webp",
@@ -31,7 +32,7 @@ const RecruterDetails = () => {
 
   return (
     <>
-      <div className="px-[8%] lg:px-[16%] py-30">
+      <div className="px-[8%] lg:px-[16%] pt-30 pb-10">
         {/* Banner de cabezera */}
         <motion.div
           variants={staggerContainer(0.2, 0.1)}
@@ -188,6 +189,8 @@ const RecruterDetails = () => {
           </div>
         </motion.div>
       </div>
+
+      <Newsletter />
     </>
   )
 }
