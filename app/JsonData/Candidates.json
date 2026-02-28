@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "image": "/Images/Candidat-1.webp",
+    "name": "Tiphany Espinosa",
+    "role": "Automation Specialist II",
+    "location": "Nāṟay"
+  },
+  {
+    "id": "2",
+    "image": "/Images/Candidat-2.webp",
+    "name": "Marthe Alesi",
+    "role": "Speech Pathologist",
+    "location": "Dabachang"
+  },
+  {
+    "id": "3",
+    "image": "/Images/Candidat-3.webp",
+    "name": "Lisette Rouf",
+    "role": "Human Resources Assistant II",
+    "location": "Guangning"
+  },
+  {
+    "id": "4",
+    "image": "/Images/Candidat-4.webp",
+    "name": "Lindsay Cotterel",
+    "role": "Biostatistician II",
+    "location": "Huangzhuang"
+  },
+  {
+    "id": "5",
+    "image": "/Images/Candidat-5.webp",
+    "name": "Jessie O'Sheerin",
+    "role": "Speech Pathologist",
+    "location": "Monterrey"
+  },
+  {
+    "id": "6",
+    "image": "/Images/Candidat-6.webp",
+    "name": "Terrence Coppenhall",
+    "role": "Programmer III ",
+    "location": "Krajan Joho"
+  },
+  {
+    "id": "7",
+    "image": "/Images/Candidat-7.webp",
+    "name": "Milzie Westberg",
+    "role": "VP Sales ",
+    "location": "Masaguisi"
+  },
+  {
+    "id": "8",
+    "image": "/Images/Candidat-8.webp",
+    "name": "Fred Wickendon",
+    "role": "Executive Secretary",
+    "location": "Villa Atamisqui"
+  },
+  {
+    "id": "9",
+    "image": "/Images/Candidat-9.webp",
+    "name": "Mireielle Coundley",
+    "role": "Administrative Officer",
+    "location": "Gaoyan"
+  },
+  {
+    "id": "10",
+    "image": "/Images/Candidat-10.webp",
+    "name": "Tabbitha Bretherick",
+    "role": "Programmer Analyst I",
+    "location": "Las Vegas"
+  },
+  {
+    "id": "11",
+    "image": "/Images/Candidat-11.webp",
+    "name": "Kaleb Purslow",
+    "role": "Sales Representative",
+    "location": "Jambubol"
+  },
+  {
+    "id": "12",
+    "image": "/Images/Candidat-12.webp",
+    "name": "Peta Braidford",
+    "role": "Environmental Specialist",
+    "location": "Camiri"
+  }
+]
