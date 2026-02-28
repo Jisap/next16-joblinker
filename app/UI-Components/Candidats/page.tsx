@@ -5,6 +5,7 @@ import { fadeIn } from "@/app/Utils/animations/variants"
 import CandidateData from "@/app/JsonData/Candidates.json"
 import Link from "next/link"
 import Image from "next/image"
+import Newsletter from "../Index/Newsletter/Newsletter"
 
 const Candidats = () => {
   return (
@@ -45,18 +46,35 @@ const Candidats = () => {
             <Link
               key={index}
               href={`/UI-Components/Candidats/${candidat.id}`}
-              className="flex flex-col shadow-xl shadow-white/15 p-5 rounded-md group hover:bg-prim cursor-pointer"
+              className="flex flex-col justify-center items-center shadow-xl shadow-white/15 p-5 rounded-md group hover:-translate-y-2 transition-all duration-300 cursor-pointer"
             >
               <Image
                 src={candidat.image}
                 alt={candidat.name}
                 width={60}
                 height={60}
+                className="rounded-xl bg-prim"
               />
+
+              <div className="flex flex-col items-center my-3">
+                <h2 className="Unbounded text-xl group-hover:text-white transition-all duration-300">
+                  {candidat.name}
+                </h2>
+
+                <h2 className="Unbounded mt-1 text-[13px] font-light text-gray-400 group-hover:text-white transition-all duration-300">
+                  {candidat.role}
+                </h2>
+
+                <span className="text-gray-300 text-xl mt-3 group-hover:text-white transition-all duration-300">
+                  <i className="ri-map-pin-line"></i> {candidat.location}
+                </span>
+              </div>
             </Link>
           ))}
         </div>
       </div>
+
+      <Newsletter />
     </>
   )
 }
