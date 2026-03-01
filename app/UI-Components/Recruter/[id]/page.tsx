@@ -60,7 +60,7 @@ const RecruterDetails = () => {
               variants={fadeIn("right", 0.4)}
               className="w-full lg:w-2/3"
             >
-              <div className="flex flex-col mt-15">
+              <motion.div variants={fadeIn("up", 0.3)}>
                 <h2 className="Unbounded text-3xl my-4">
                   {recruter.name}
                 </h2>
@@ -69,25 +69,29 @@ const RecruterDetails = () => {
                   <i className="bi bi-geo-alt"></i>
                   {" "}{recruter.location}
                 </p>
-              </div>
+              </motion.div>
 
-              <h2 className="Unbounded text-3xl my-5 font-light">
-                About: ({recruter.name})
-              </h2>
+              <motion.div variants={fadeIn("up", 0.4)}>
+                <h2 className="Unbounded text-3xl my-5 font-light">
+                  About: ({recruter.name})
+                </h2>
 
-              <p className="text-gray-500 mb-5">
-                As a Human Resources Coordinator, you will work within a Product
-                Delivery Team fused with UX, engineering, product and data talent.
-                You will help the team design beautiful interfaces that solve business
-                challenges for our clients. We work with a number of Tier 1 banks on
-                building web-based applications for AML, KYC and Sanctions List management
-                workflows. This role is ideal if you are looking to segue your career
-                into the FinTech or Big Data arenas.
-              </p>
+                <p className="text-gray-500 mb-5">
+                  As a Human Resources Coordinator, you will work within a Product
+                  Delivery Team fused with UX, engineering, product and data talent.
+                  You will help the team design beautiful interfaces that solve business
+                  challenges for our clients. We work with a number of Tier 1 banks on
+                  building web-based applications for AML, KYC and Sanctions List management
+                  workflows. This role is ideal if you are looking to segue your career
+                  into the FinTech or Big Data arenas.
+                </p>
+              </motion.div>
 
-              <h2 className="Unbounded text-3xl my-5 font-light">
-                Gallery
-              </h2>
+              <motion.div variants={fadeIn("up", 0.5)}>
+                <h2 className="Unbounded text-3xl my-5 font-light">
+                  Gallery
+                </h2>
+              </motion.div>
 
               <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
                 {Gallerys.map((img, index) => (
