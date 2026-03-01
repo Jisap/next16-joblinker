@@ -125,7 +125,7 @@ const CandidatesDetails = () => {
             </div>
 
             {/* right side */}
-            <div className="w-full lg:w-1/2 sticky top-25 left-0 h-full mt-25">
+            <div className="w-full lg:w-1/2 sticky top-25 left-0 h-full mt-22">
               <motion.div
                 variants={fadeIn("left", 0.6)}
                 className="shadow-light rounded-2xl p-4"
@@ -146,6 +146,16 @@ const CandidatesDetails = () => {
 
                     <p className="text-gray-300">
                       <i className="bi bi-geo-alt"> {candidate.location}</i>
+                    </p>
+                  </div>
+
+                  <div className="my-5">
+                    <h2 className="Unbounded text-gray-400 text-sm">
+                      Role
+                    </h2>
+
+                    <p className="Unbounded font-light text-md">
+                      {candidate.role}
                     </p>
                   </div>
                 </div>
