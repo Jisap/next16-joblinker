@@ -58,7 +58,7 @@ const RecruterDetails = () => {
             {/* Nombre, ubicacion y gallery izquierda*/}
             <motion.div
               variants={fadeIn("right", 0.4)}
-              className="w-full lg:w-1/1"
+              className="w-full lg:w-2/3"
             >
               <div className="flex flex-col mt-15">
                 <h2 className="Unbounded text-3xl my-4">
@@ -108,83 +108,74 @@ const RecruterDetails = () => {
             </motion.div>
 
             {/* Informacion del recruter derecha */}
-            <div className="w-full lg:w-1/2 sticky top-25 left-0 h-full mt-35">
+            <div className="w-full lg:w-1/3 sticky top-25 left-0 h-fit mt-35">
               <motion.div
                 variants={fadeIn("left", 0.6)}
-                className="shadow-light rounded-2xl p-4"
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-2xl relative overflow-hidden group"
               >
-                <div className="flex items-center gap-3">
-                  <Image
-                    src={recruter.image}
-                    alt={recruter.name}
-                    width={100}
-                    height={100}
-                    className="rounded-xl bg-white object-cover border-3 border-white"
-                  />
+                {/* Decorative background element */}
+                <div className="absolute -top-24 -right-24 w-48 h-48 bg-prim/20 rounded-full blur-3xl group-hover:bg-prim/30 transition-colors duration-500"></div>
 
-                  <div className="flex flex-col gap-1">
-                    <h5 className="Unbounded">
+                <div className="relative z-10">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="relative mb-4">
+                      <div className="absolute inset-0 bg-prim/40 rounded-2xl blur-lg scale-95 group-hover:scale-110 transition-transform duration-500"></div>
+                      <Image
+                        src={recruter.image}
+                        alt={recruter.name}
+                        width={120}
+                        height={120}
+                        className="rounded-2xl bg-gray-800 object-cover border-2 border-white/20 relative z-10"
+                      />
+                    </div>
+
+                    <h3 className="Unbounded text-xl font-bold mb-1">
                       {recruter.name}
-                    </h5>
+                    </h3>
 
-                    <p className="text-gray-300">
-                      <i className="bi bi-geo-alt"> {recruter.location}</i>
-                    </p>
+                    <div className="flex items-center gap-2 text-gray-400 mb-6 bg-white/5 px-4 py-2 rounded-full border border-white/5 text-sm">
+                      <i className="bi bi-geo-alt text-prim"></i>
+                      <span>{recruter.location}</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    {[
+                      { label: "Industry", value: "Finance", icon: "bi-building" },
+                      { label: "Company Size", value: "219 employees", icon: "bi-people" },
+                      { label: "Founded in", value: "2018", icon: "bi-calendar-check" }
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/5">
+                        <div className="flex items-center gap-3">
+                          <i className={`${item.icon} text-prim`}></i>
+                          <span className="text-gray-400 text-xs Unbounded">{item.label}</span>
+                        </div>
+                        <span className="font-bold text-xs Unbounded">{item.value}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button className="w-full py-4 bg-prim hover:bg-prim/80 text-white rounded-2xl Unbounded text-sm font-semibold transition-all duration-300 shadow-lg shadow-prim/20 hover:shadow-prim/40 hover:-translate-y-1">
+                    Contact Recruiter
+                  </button>
+
+                  <div className="mt-8 pt-6 border-t border-white/10">
+                    <div className="flex justify-center gap-4">
+                      {["facebook", "twitter", "instagram", "linkedin"].map((social, index) => (
+                        <motion.a
+                          href="#"
+                          key={social}
+                          variants={fadeIn("up", 0.1 * index + 0.8)}
+                          whileHover={{ y: -5, scale: 1.1 }}
+                          className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-prim/20 hover:border-prim/30 transition-all duration-300"
+                        >
+                          <i className={`bi bi-${social} text-lg`}></i>
+                        </motion.a>
+                      ))}
+                    </div>
                   </div>
                 </div>
-
-                <div className="my-5">
-                  <h2 className="Unmbounded text-gray-400">
-                    Industry
-                  </h2>
-
-                  <p className="Unbounded font-light text-xl">
-                    Finance
-                  </p>
-                </div>
-
-                <div className="my-5">
-                  <h2 className="Unmbounded text-gray-400">
-                    Company Size
-                  </h2>
-
-                  <p className="Unbounded font-light text-xl">
-                    219 employees
-                  </p>
-                </div>
-
-                <div className="my-5">
-                  <h2 className="Unmbounded text-gray-400">
-                    Founded in
-                  </h2>
-
-                  <p className="Unbounded font-light text-xl">
-                    2018
-                  </p>
-                </div>
-
-                <div className="my-5">
-                  <h2 className="Unmbounded text-gray-400 text-sm">
-                    Location
-                  </h2>
-
-                  <p className="Unbounded font-light text-xl">
-                    {recruter.location}
-                  </p>
-                </div>
               </motion.div>
-            </div>
-          </div>
-
-          <div className="my-6">
-            <div className="my-5 flex items-center gap-3">
-              {["facebook", "twitter", "instagram", "linkedin"].map((social, index) => (
-                <motion.i
-                  key={social}
-                  variants={fadeIn("up", 0.1 * index + 0.8)}
-                  className={`bi bi-${social} border rounded-full px-2 py-1 text-2xl text-gray-400 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-pointer`}
-                ></motion.i>
-              ))}
             </div>
           </div>
         </motion.div>
