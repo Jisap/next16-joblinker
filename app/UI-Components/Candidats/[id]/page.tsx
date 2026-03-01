@@ -125,7 +125,44 @@ const CandidatesDetails = () => {
             </div>
 
             {/* right side */}
+            <div className="w-full lg:w-1/2 sticky top-25 left-0 h-full mt-25">
+              <motion.div
+                variants={fadeIn("left", 0.6)}
+                className="shadow-light rounded-2xl p-4"
+              >
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={candidate.image}
+                    alt={candidate.name}
+                    width={100}
+                    height={100}
+                    className="rounded-xl bg-white object-cover border-3 border-white"
+                  />
 
+                  <div className="flex flex-col gap-1">
+                    <h5 className="Unbounded">
+                      {candidate.name}
+                    </h5>
+
+                    <p className="text-gray-300">
+                      <i className="bi bi-geo-alt"> {candidate.location}</i>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="my-6">
+                  <div className="my-5 flex items-center gap-3">
+                    {["facebook", "twitter", "instagram", "linkedin"].map((social, index) => (
+                      <motion.i
+                        key={social}
+                        variants={fadeIn("up", 0.1 * index + 0.8)}
+                        className={`bi bi-${social} border rounded-full px-2 py-1 text-2xl text-gray-400 hover:text-white hover:-translate-y-2 transition-all duration-300 cursor-pointer`}
+                      ></motion.i>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
       </div>
