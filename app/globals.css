@@ -261,3 +261,32 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
+
+.candidat-exp {
+  position: relative;
+}
+
+.candidat-exp::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3%;
+  height: 15px;
+  width: 15px;
+  background-color: var(--color-white);
+  border-radius: 100%;
+}
+
+.candidat-exp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2.5%;
+  width: 2px;
+  height: 150%;
+  background-color: var(--color-white);
+}
+
+.candidat-exp:last-child::before {
+  height: 100%;
+}

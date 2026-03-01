@@ -4,83 +4,482 @@
     "image": "/Images/Candidat-1.webp",
     "name": "Tiphany Espinosa",
     "role": "Automation Specialist II",
-    "location": "Nāṟay"
+    "location": "Nāṟay",
+    "skills": [
+      "Automation",
+      "Python",
+      "Scripting",
+      "QA"
+    ],
+    "experience": [
+      {
+        "year": "2022 - Present",
+        "desc": "Senior Automation Engineer at TechFlow. Led a team of 5 in designing automated test frameworks."
+      },
+      {
+        "year": "2019 - 2022",
+        "desc": "QA Analyst at SoftSystems. Responsible for manual and automated testing of web applications."
+      },
+      {
+        "year": "2016 - 2019",
+        "desc": "Junior QA Engineer at TestCorp. Executed manual test cases and reported bugs."
+      }
+    ],
+    "education": [
+      {
+        "year": "2012 - 2016",
+        "desc": "Bachelor of Science in Computer Science, University of Technology."
+      },
+      {
+        "year": "2016 - 2018",
+        "desc": "Master's Degree in Automation Engineering, Tech Institute."
+      },
+      {
+        "year": "2018",
+        "desc": "Certified Python Developer, Online Academy."
+      }
+    ]
   },
   {
     "id": "2",
     "image": "/Images/Candidat-2.webp",
     "name": "Marthe Alesi",
     "role": "Speech Pathologist",
-    "location": "Dabachang"
+    "location": "Dabachang",
+    "skills": [
+      "Speech Therapy",
+      "Diagnostics",
+      "Patient Care"
+    ],
+    "experience": [
+      {
+        "year": "2021 - Present",
+        "desc": "Lead Speech Pathologist at City Hospital. Diagnosing and treating communication disorders."
+      },
+      {
+        "year": "2018 - 2021",
+        "desc": "Clinical Therapist at HealthCare Inc. Worked with pediatric patients to improve speech."
+      },
+      {
+        "year": "2015 - 2018",
+        "desc": "Speech Therapy Assistant at EduCare. Supported senior therapists in patient sessions."
+      }
+    ],
+    "education": [
+      {
+        "year": "2011 - 2015",
+        "desc": "Bachelor of Science in Communication Disorders, State University."
+      },
+      {
+        "year": "2015 - 2017",
+        "desc": "Master of Science in Speech-Language Pathology, Health Sciences College."
+      },
+      {
+        "year": "2017",
+        "desc": "Certificate of Clinical Competence in Speech-Language Pathology (CCC-SLP)."
+      }
+    ]
   },
   {
     "id": "3",
     "image": "/Images/Candidat-3.webp",
     "name": "Lisette Rouf",
     "role": "Human Resources Assistant II",
-    "location": "Guangning"
+    "location": "Guangning",
+    "skills": [
+      "Recruitment",
+      "Employee Relations",
+      "HRIS"
+    ],
+    "experience": [
+      {
+        "year": "2023 - Present",
+        "desc": "HR Coordinator at GlobalCorp. Managing recruitment cycles and employee onboarding."
+      },
+      {
+        "year": "2020 - 2023",
+        "desc": "HR Intern at LocalBiz. Assisted in maintaining employee records and scheduling interviews."
+      },
+      {
+        "year": "2018 - 2020",
+        "desc": "Recruiting Coordinator at StaffingSolutions. Coordinated interview schedules and candidate communications."
+      }
+    ],
+    "education": [
+      {
+        "year": "2014 - 2018",
+        "desc": "Bachelor of Arts in Human Resources Management, City College."
+      },
+      {
+        "year": "2018 - 2019",
+        "desc": "Professional in Human Resources (PHR) Certification."
+      },
+      {
+        "year": "2019",
+        "desc": "Certificate in Employee Relations, HR Institute."
+      }
+    ]
   },
   {
     "id": "4",
     "image": "/Images/Candidat-4.webp",
     "name": "Lindsay Cotterel",
     "role": "Biostatistician II",
-    "location": "Huangzhuang"
+    "location": "Huangzhuang",
+    "skills": [
+      "Statistics",
+      "Data Analysis",
+      "R Programming"
+    ],
+    "experience": [
+      {
+        "year": "2020 - Present",
+        "desc": "Senior Biostatistician at PharmaResearch. Analyzing clinical trial data for new drug approvals."
+      },
+      {
+        "year": "2017 - 2020",
+        "desc": "Data Analyst at BioLabs. Conducted statistical analysis for biological studies."
+      },
+      {
+        "year": "2014 - 2017",
+        "desc": "Statistical Programmer at MedStats. Developed SAS programs for clinical data analysis."
+      }
+    ],
+    "education": [
+      {
+        "year": "2010 - 2014",
+        "desc": "Bachelor of Science in Statistics, National University."
+      },
+      {
+        "year": "2014 - 2016",
+        "desc": "Master of Public Health in Biostatistics, Medical University."
+      },
+      {
+        "year": "2016",
+        "desc": "Certified Analytics Professional (CAP)."
+      }
+    ]
   },
   {
     "id": "5",
     "image": "/Images/Candidat-5.webp",
     "name": "Jessie O'Sheerin",
     "role": "Speech Pathologist",
-    "location": "Monterrey"
+    "location": "Monterrey",
+    "skills": [
+      "Speech Pathology",
+      "Rehabilitation",
+      "Communication"
+    ],
+    "experience": [
+      {
+        "year": "2019 - Present",
+        "desc": "Speech Therapist at Wellness Center. Specializing in post-stroke rehabilitation."
+      },
+      {
+        "year": "2016 - 2019",
+        "desc": "Junior Pathologist at Community Clinic. Provided therapy for developmental speech delays."
+      },
+      {
+        "year": "2013 - 2016",
+        "desc": "Intern Speech Therapist at SchoolDistrict. Assisted in speech evaluations for students."
+      }
+    ],
+    "education": [
+      {
+        "year": "2009 - 2013",
+        "desc": "Bachelor of Arts in Linguistics, Liberal Arts College."
+      },
+      {
+        "year": "2013 - 2015",
+        "desc": "Master of Science in Communication Sciences and Disorders."
+      },
+      {
+        "year": "2015",
+        "desc": "State Licensure in Speech-Language Pathology."
+      }
+    ]
   },
   {
     "id": "6",
     "image": "/Images/Candidat-6.webp",
     "name": "Terrence Coppenhall",
     "role": "Programmer III ",
-    "location": "Krajan Joho"
+    "location": "Krajan Joho",
+    "skills": [
+      "Java",
+      "C++",
+      "System Design",
+      "Algorithms"
+    ],
+    "experience": [
+      {
+        "year": "2021 - Present",
+        "desc": "Senior Backend Developer at CodeBase. Architecting scalable microservices."
+      },
+      {
+        "year": "2018 - 2021",
+        "desc": "Software Engineer at DevSolutions. Maintained legacy systems and implemented new features."
+      },
+      {
+        "year": "2015 - 2018",
+        "desc": "Junior Developer at StartUpX. Built features for the main product using Java."
+      }
+    ],
+    "education": [
+      {
+        "year": "2011 - 2015",
+        "desc": "Bachelor of Science in Software Engineering, Tech University."
+      },
+      {
+        "year": "2015 - 2017",
+        "desc": "Master of Computer Science, Institute of Technology."
+      },
+      {
+        "year": "2017",
+        "desc": "Oracle Certified Professional, Java SE Programmer."
+      }
+    ]
   },
   {
     "id": "7",
     "image": "/Images/Candidat-7.webp",
     "name": "Milzie Westberg",
     "role": "VP Sales ",
-    "location": "Masaguisi"
+    "location": "Masaguisi",
+    "skills": [
+      "Sales Strategy",
+      "Leadership",
+      "Negotiation"
+    ],
+    "experience": [
+      {
+        "year": "2018 - Present",
+        "desc": "VP of Sales at MarketLeaders. Driving global sales strategy and revenue growth."
+      },
+      {
+        "year": "2014 - 2018",
+        "desc": "Regional Sales Director at SalesForce. Managed sales operations for the western region."
+      },
+      {
+        "year": "2010 - 2014",
+        "desc": "Sales Manager at TechGiant. Led a regional sales team to exceed targets."
+      }
+    ],
+    "education": [
+      {
+        "year": "2006 - 2010",
+        "desc": "Bachelor of Business Administration, Business School."
+      },
+      {
+        "year": "2010 - 2012",
+        "desc": "Master of Business Administration (MBA), University of Commerce."
+      },
+      {
+        "year": "2012",
+        "desc": "Certified Sales Executive (CSE)."
+      }
+    ]
   },
   {
     "id": "8",
     "image": "/Images/Candidat-8.webp",
     "name": "Fred Wickendon",
     "role": "Executive Secretary",
-    "location": "Villa Atamisqui"
+    "location": "Villa Atamisqui",
+    "skills": [
+      "Administration",
+      "Scheduling",
+      "Communication"
+    ],
+    "experience": [
+      {
+        "year": "2020 - Present",
+        "desc": "Executive Assistant at CorpExec. Managing CEO's schedule and travel arrangements."
+      },
+      {
+        "year": "2017 - 2020",
+        "desc": "Office Manager at AdminPros. Oversaw daily office operations and staff coordination."
+      },
+      {
+        "year": "2014 - 2017",
+        "desc": "Administrative Assistant at LawFirm. Managed correspondence and filing systems."
+      }
+    ],
+    "education": [
+      {
+        "year": "2010 - 2014",
+        "desc": "Bachelor of Arts in Business Administration, City University."
+      },
+      {
+        "year": "2014",
+        "desc": "Certified Administrative Professional (CAP)."
+      },
+      {
+        "year": "2015",
+        "desc": "Diploma in Office Management."
+      }
+    ]
   },
   {
     "id": "9",
     "image": "/Images/Candidat-9.webp",
     "name": "Mireielle Coundley",
     "role": "Administrative Officer",
-    "location": "Gaoyan"
+    "location": "Gaoyan",
+    "skills": [
+      "Office Management",
+      "Organization",
+      "Reporting"
+    ],
+    "experience": [
+      {
+        "year": "2022 - Present",
+        "desc": "Admin Officer at GovAgency. Handling departmental records and compliance."
+      },
+      {
+        "year": "2019 - 2022",
+        "desc": "Receptionist at FrontDesk. Managed front office and visitor inquiries."
+      },
+      {
+        "year": "2016 - 2019",
+        "desc": "Office Coordinator at DesignStudio. Handled supplies and facility management."
+      }
+    ],
+    "education": [
+      {
+        "year": "2012 - 2016",
+        "desc": "Bachelor of Science in Management, State College."
+      },
+      {
+        "year": "2016",
+        "desc": "Certificate in Administrative Support."
+      },
+      {
+        "year": "2017",
+        "desc": "Advanced Microsoft Office Certification."
+      }
+    ]
   },
   {
     "id": "10",
     "image": "/Images/Candidat-10.webp",
     "name": "Tabbitha Bretherick",
     "role": "Programmer Analyst I",
-    "location": "Las Vegas"
+    "location": "Las Vegas",
+    "skills": [
+      "Coding",
+      "Analysis",
+      "SQL",
+      "Debugging"
+    ],
+    "experience": [
+      {
+        "year": "2023 - Present",
+        "desc": "Programmer Analyst at DataTech. Developing data processing scripts and reports."
+      },
+      {
+        "year": "2021 - 2023",
+        "desc": "Junior Developer at WebWorks. Assisted in frontend development and bug fixing."
+      },
+      {
+        "year": "2019 - 2021",
+        "desc": "IT Support Specialist at UniTech. Provided technical support for hardware and software issues."
+      }
+    ],
+    "education": [
+      {
+        "year": "2015 - 2019",
+        "desc": "Bachelor of Science in Information Technology, Tech College."
+      },
+      {
+        "year": "2019",
+        "desc": "CompTIA A+ Certification."
+      },
+      {
+        "year": "2020",
+        "desc": "Certified Data Analyst."
+      }
+    ]
   },
   {
     "id": "11",
     "image": "/Images/Candidat-11.webp",
     "name": "Kaleb Purslow",
     "role": "Sales Representative",
-    "location": "Jambubol"
+    "location": "Jambubol",
+    "skills": [
+      "Sales",
+      "Customer Service",
+      "CRM"
+    ],
+    "experience": [
+      {
+        "year": "2021 - Present",
+        "desc": "Sales Rep at RetailGiants. Exceeding monthly sales targets by 20%."
+      },
+      {
+        "year": "2019 - 2021",
+        "desc": "Customer Service Associate at HelpDesk. Resolved customer complaints and inquiries."
+      },
+      {
+        "year": "2017 - 2019",
+        "desc": "Retail Associate at FashionStore. Assisted customers and managed inventory."
+      }
+    ],
+    "education": [
+      {
+        "year": "2013 - 2017",
+        "desc": "Bachelor of Arts in Marketing, University of Arts."
+      },
+      {
+        "year": "2017",
+        "desc": "Certificate in Sales Management."
+      },
+      {
+        "year": "2018",
+        "desc": "Customer Service Excellence Training."
+      }
+    ]
   },
   {
     "id": "12",
     "image": "/Images/Candidat-12.webp",
     "name": "Peta Braidford",
     "role": "Environmental Specialist",
-    "location": "Camiri"
+    "location": "Camiri",
+    "skills": [
+      "Environmental Science",
+      "Compliance",
+      "Research"
+    ],
+    "experience": [
+      {
+        "year": "2020 - Present",
+        "desc": "Environmental Consultant at GreenEarth. Conducting impact assessments for new projects."
+      },
+      {
+        "year": "2017 - 2020",
+        "desc": "Field Researcher at EcoStudies. Collected samples and data for environmental reports."
+      },
+      {
+        "year": "2014 - 2017",
+        "desc": "Junior Environmental Scientist at EcoConsult. Assisted in field surveys and data collection."
+      }
+    ],
+    "education": [
+      {
+        "year": "2010 - 2014",
+        "desc": "Bachelor of Science in Environmental Science, Earth University."
+      },
+      {
+        "year": "2014 - 2016",
+        "desc": "Master of Science in Ecology, Nature Institute."
+      },
+      {
+        "year": "2016",
+        "desc": "Certified Environmental Professional (CEP)."
+      }
+    ]
   }
 ]
