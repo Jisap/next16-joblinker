@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { fadeIn } from "@/app/Utils/animations/variants"
+import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants"
 import CandidateData from "@/app/JsonData/Candidates.json"
 import Link from "next/link"
 import Image from "next/image"
@@ -11,7 +11,7 @@ const Candidats = () => {
   return (
     <>
       <motion.div
-        variants={fadeIn("up", 0.2)}
+        variants={fadeIn("up", 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
@@ -28,7 +28,7 @@ const Candidats = () => {
 
       <div className="px-[8%] lg:px-[16%] py-10">
         <motion.div
-          variants={fadeIn("down", 0.2)}
+          variants={fadeIn("down", 0.3)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
@@ -41,37 +41,47 @@ const Candidats = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-5 mt-10">
+        <motion.div
+          variants={staggerContainer(0.1, 0.5)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-5 mt-10"
+        >
           {CandidateData.map((candidat, index) => (
-            <Link
+            <motion.div
               key={index}
-              href={`/UI-Components/Candidats/${candidat.id}`}
-              className="flex flex-col justify-center items-center shadow-xl shadow-white/15 p-5 rounded-md group hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+              variants={fadeIn("up", 0.2)}
             >
-              <Image
-                src={candidat.image}
-                alt={candidat.name}
-                width={60}
-                height={60}
-                className="rounded-xl bg-prim"
-              />
+              <Link
+                href={`/UI-Components/Candidats/${candidat.id}`}
+                className="flex flex-col justify-center items-center shadow-xl shadow-white/15 p-5 rounded-md group hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+              >
+                <Image
+                  src={candidat.image}
+                  alt={candidat.name}
+                  width={60}
+                  height={60}
+                  className="rounded-xl bg-prim"
+                />
 
-              <div className="flex flex-col items-center my-3">
-                <h2 className="Unbounded text-xl group-hover:text-white transition-all duration-300">
-                  {candidat.name}
-                </h2>
+                <div className="flex flex-col items-center my-3">
+                  <h2 className="Unbounded text-xl group-hover:text-white transition-all duration-300">
+                    {candidat.name}
+                  </h2>
 
-                <h2 className="Unbounded mt-1 text-[13px] font-light text-gray-400 group-hover:text-white transition-all duration-300">
-                  {candidat.role}
-                </h2>
+                  <h2 className="Unbounded mt-1 text-[13px] font-light text-gray-400 group-hover:text-white transition-all duration-300">
+                    {candidat.role}
+                  </h2>
 
-                <span className="text-gray-300 text-xl mt-3 group-hover:text-white transition-all duration-300">
-                  <i className="ri-map-pin-line"></i> {candidat.location}
-                </span>
-              </div>
-            </Link>
+                  <span className="text-gray-300 text-xl mt-3 group-hover:text-white transition-all duration-300">
+                    <i className="ri-map-pin-line"></i> {candidat.location}
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <Newsletter />
