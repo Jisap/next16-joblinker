@@ -85,7 +85,13 @@ const About = () => {
 
       {/* Team */}
       <div className="px-[8%] lg:px-[16%] py-15">
-        <div className="flex flex-col items-center justify-center">
+        <motion.div
+          variants={fadeIn("down", 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="flex flex-col items-center justify-center"
+        >
           <h2 className="Unbounded text-3xl mb-2">
             Creative Team Members
           </h2>
@@ -93,13 +99,21 @@ const About = () => {
           <p className="text-gray-300 text-lg mb-8">
             What our customers say about us
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <motion.div
+          variants={staggerContainer(0.1, 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+        >
           {team.map((member, index) => (
-            <div
+            <motion.div
+              variants={fadeIn("up", 0.2)}
+              whileHover={{ y: -10 }}
               key={index}
-              className="flex flex-col items-center justify-center border border-gray-700 hover:bg-prim group pb-5 rounded-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+              className="flex flex-col items-center justify-center border border-gray-700 hover:bg-prim group pb-5 rounded-2xl transition-colors duration-300 cursor-pointer"
             >
               <div className="w-full h-full mb-3 bg-white rounded-2xl">
                 <Image
@@ -125,9 +139,9 @@ const About = () => {
                 <i className="ri-instagram-fill"></i>
                 <i className="ri-linkedin-fill"></i>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <Newsletter />
