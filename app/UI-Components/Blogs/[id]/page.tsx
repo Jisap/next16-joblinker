@@ -24,18 +24,24 @@ const BlogDetail = () => {
 
   return (
     <>
-      <div className="px-[8%] lg:px-[16%] pt-30 py-10 pb-0">
-        <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg mb-10">
+      <motion.div
+        variants={staggerContainer(0.1, 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="px-[8%] lg:px-[16%] pt-30 py-10 pb-0"
+      >
+        <motion.div variants={fadeIn("up", 0.2)} className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg mb-10">
           <Image
             src={blog.image}
             alt={blog.title}
             fill
             className="rounded-xl object-cover"
           />
-        </div>
+        </motion.div>
 
         <div className="">
-          <div className="text-gray-400 mb-2">
+          <motion.div variants={fadeIn("up", 0.3)} className="text-gray-400 mb-2">
             <p className="flex items-center gap-2 mb-4">
               <span className="bg-gray-500/50 px-5 py-1 rounded-full text-gray-300 group-hover:text-white transition-all duration-300">
                 {blog.tag}
@@ -63,9 +69,9 @@ const BlogDetail = () => {
                 Mauris facilisis hendrerit nulla at vehicula.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="mt-5">
+          <motion.div variants={fadeIn("up", 0.4)} className="mt-5">
             <h2 className="Unbounded text-2xl mb-3">
               More Info
             </h2>
@@ -87,9 +93,9 @@ const BlogDetail = () => {
               interdum leo. Maecenas aliquam felis justo, ut sagittis nunc maximus ut.
               Duis luctus tempor arcu, vitae elementum massa porta non. Morbi aliquet, neque ut volutpat sodales, dui enim facilisis enim, ut dictum lacus neque in urna. Nam metus elit, ullamcorper pretium nisi at, aliquet gravida lectus. Nullam id lectus pellentesque, suscipit dolor eget, consequat velit. Pellentesque finibus commodo nisl, id interdum leo. Maecenas aliquam felis justo, ut sagittis nunc maximus ut.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="px-0 md:px-10">
+          <motion.div variants={fadeIn("up", 0.5)} className="px-0 md:px-10">
             <div className="border border-gray-600 rounded-2xl mt-10 px-5 md:px-10 py-5">
               <div className="flex items-center gap-4">
                 <Image
@@ -115,17 +121,17 @@ const BlogDetail = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus omnis impedit, autem laborum excepturi tempora, assumenda vero consequatur placeat dolorum accusamus expedita delectus similique deserunt mollitia illum non officia eius!
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex justify-center items-center mt-10">
+        <motion.div variants={fadeIn("up", 0.6)} className="flex justify-center items-center mt-10">
           <button className="items-center cursor-pointer font-light bg-gray-100/20 px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300">
             <Link href="/UI-Components/Blogs">
               View More Articles
             </Link>
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <Newsletter />
     </>
