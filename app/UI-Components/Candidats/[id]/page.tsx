@@ -5,6 +5,7 @@ import CandidateData from "@/app/JsonData/Candidates.json"
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants";
 import Image from "next/image";
+import Newsletter from "../../Index/Newsletter/Newsletter";
 
 const CandidatesDetails = () => {
 
@@ -212,6 +213,8 @@ const CandidatesDetails = () => {
           </div>
         </motion.div>
       </div>
+
+      <Newsletter />
     </>
   )
 }
