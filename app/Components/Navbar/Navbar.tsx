@@ -35,6 +35,10 @@ const Navbar = () => {
   const [isFixed, setIsFixed] = useState(false);
   const pathname = usePathname();
 
+  if (pathname === "/UI-Components/Signup") {
+    return null;
+  }
+
   const toggleDropdown = (label: string) => {
     setActiveDropdown((prev) => (prev === label ? null : label));
   };

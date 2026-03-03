@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants"
 
@@ -46,6 +47,12 @@ const footerLinks = [
 const socialIcons = ["facebook", "twitter", "instagram", "linkedin", "youtube"]
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  if (pathname === "/UI-Components/Signup") {
+    return null;
+  }
+
   return (
     <motion.div
       variants={staggerContainer(0.1, 0.1)}
