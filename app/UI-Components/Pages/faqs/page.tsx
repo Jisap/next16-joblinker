@@ -47,9 +47,20 @@ const Faq = () => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value)
+    setOpenIndex(null)
+  }
+
+  const clearSearch = () => {
+    setSearchQuery("")
+    setOpenIndex(0) // Optionally re-open the first one when cleared
+  }
+
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+    faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    faq.category.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
   return (
@@ -102,7 +113,7 @@ const Faq = () => {
               type="text"
               placeholder="Search for answers..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={handleSearch}
               className="w-full bg-white/5 border border-white/10 rounded-full px-8 py-4 focus:outline-none focus:border-prim focus:ring-1 focus:ring-prim transition-all duration-300 Unbounded text-sm"
             />
             <i className="bi bi-search absolute right-6 top-1/2 -translate-y-1/2 text-gray-500"></i>
@@ -151,68 +162,87 @@ const Faq = () => {
           </motion.div>
 
           {/* Right Side: FAQs */}
-          <motion.div
-            variants={staggerContainer(0.1, 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="lg:col-span-8 space-y-4"
-          >
-            {filteredFaqs.length > 0 ? (
-              filteredFaqs.map((faq, index) => (
+          <div className="lg:col-span-8 space-y-4">
+            <AnimatePresence mode="wait">
+              {filteredFaqs.length > 0 ? (
                 <motion.div
-                  key={index}
-                  variants={fadeIn("up", 0.1 * index)}
-                  className={`group border rounded-2xl overflow-hidden transition-all duration-500
-                    ${openIndex === index
-                      ? "bg-white/5 border-prim/30 shadow-[0_0_20px_rgba(97,24,191,0.05)]"
-                      : "bg-white/1 border-white/5 hover:border-white/10"}
-                  `}
+                  key="faq-list"
+                  variants={staggerContainer(0.1, 0.1)}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="space-y-4"
                 >
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className='w-full flex justify-between items-start px-8 py-7 text-left focus:outline-none cursor-pointer'
-                  >
-                    <div className="flex flex-col gap-2">
-                      <span className="text-[10px] text-prim font-bold uppercase tracking-widest Unbounded opacity-70">
-                        {faq.category}
-                      </span>
-                      <span className={`md:text-lg Unbounded transition-colors duration-300 ${openIndex === index ? "text-prim" : "text-white/90"}`}>
-                        {faq.question}
-                      </span>
-                    </div>
-
-                    <div className={`mt-5 p-2 rounded-full transition-all duration-300 flex items-center justify-center
-                      ${openIndex === index ? "bg-prim text-white rotate-180" : "bg-white/5 text-gray-400 group-hover:bg-white/10"}
-                    `}>
-                      <i className="bi bi-chevron-down" />
-                    </div>
-                  </button>
-
-                  <AnimatePresence>
-                    {openIndex === index && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                  {filteredFaqs.map((faq, index) => (
+                    <motion.div
+                      key={faq.question}
+                      variants={fadeIn("up", 0.1)}
+                      layout
+                      className={`group border rounded-2xl overflow-hidden transition-all duration-500
+                        ${openIndex === index
+                          ? "bg-white/5 border-prim/30 shadow-[0_0_20px_rgba(97,24,191,0.05)]"
+                          : "bg-white/1 border-white/5 hover:border-white/10"}
+                      `}
+                    >
+                      <button
+                        onClick={() => toggleFAQ(index)}
+                        className='w-full flex justify-between items-start px-8 py-7 text-left focus:outline-none cursor-pointer'
                       >
-                        <div className='px-8 pb-8 text-gray-400 leading-relaxed border-t border-white/5 pt-6'>
-                          {faq.answer}
+                        <div className="flex flex-col gap-2">
+                          <span className="text-[10px] text-prim font-bold uppercase tracking-widest Unbounded opacity-70">
+                            {faq.category}
+                          </span>
+                          <span className={`md:text-lg Unbounded transition-colors duration-300 ${openIndex === index ? "text-prim" : "text-white/90"}`}>
+                            {faq.question}
+                          </span>
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+
+                        <div className={`mt-5 p-2 rounded-full transition-all duration-300 flex items-center justify-center
+                          ${openIndex === index ? "bg-prim text-white rotate-180" : "bg-white/5 text-gray-400 group-hover:bg-white/10"}
+                        `}>
+                          <i className="bi bi-chevron-down" />
+                        </div>
+                      </button>
+
+                      <AnimatePresence>
+                        {openIndex === index && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                          >
+                            <div className='px-8 pb-8 text-gray-400 leading-relaxed border-t border-white/5 pt-6'>
+                              {faq.answer}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))
-            ) : (
-              <div className="text-center py-20">
-                <i className="bi bi-search text-4xl text-gray-600 mb-4 block"></i>
-                <h3 className="Unbounded text-xl text-gray-500">No results found for "{searchQuery}"</h3>
-                <p className="text-gray-600 mt-2">Try searching for something else or browse categories.</p>
-              </div>
-            )}
-          </motion.div>
+              ) : (
+                <motion.div
+                  key="no-results"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="text-center py-20 bg-white/1 border border-dashed border-white/10 rounded-3xl"
+                >
+                  <i className="bi bi-search text-5xl text-gray-600 mb-4 block"></i>
+                  <h3 className="Unbounded text-xl text-gray-400 mb-2">No results found for "{searchQuery}"</h3>
+                  <p className="text-gray-500 mb-8 max-w-xs mx-auto">Try searching for different keywords or browse our categories.</p>
+                  <button
+                    onClick={clearSearch}
+                    className="text-prim hover:text-white transition-colors duration-300 Unbounded text-sm flex items-center gap-2 mx-auto cursor-pointer"
+                  >
+                    <i className="bi bi-arrow-left"></i>
+                    Clear search
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
 
