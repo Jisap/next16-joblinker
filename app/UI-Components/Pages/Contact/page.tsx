@@ -6,6 +6,8 @@ import Image from 'next/image'
 import ContactIcons1 from "@/public/Images/contact-icon1.svg"
 import ContactIcons2 from "@/public/Images/contact-icon2.svg"
 import ContactIcons3 from "@/public/Images/contact-icon3.svg"
+import Link from 'next/link'
+import Newsletter from '../../Index/Newsletter/Newsletter'
 
 
 
@@ -107,6 +109,59 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
+      <div className='px-[8%] lg:px-[16%] pb-10'>
+        <div className='flex flex-col items-center justify-center'>
+          <h2 className='Unbounded text-4xl mb-4'>
+            Write your opinion
+          </h2>
+
+          <p className='text-gray-300'>
+            We will be glad to hear from you
+          </p>
+        </div>
+
+        <div className='flex flex-col lg:flex-row items-start mt-10 gap-5'>
+          <div className='contact-form w-full lg:w-1/2 flex flex-col rounded-2xl'>
+            <div className='flex flex-col mb-5'>
+              <input
+                type="text"
+                placeholder='Name'
+                className='font-semibold mt-4 w-full text-white border border-gray-500 p-3 py-4 rounded-xl focus:outline-none focus:border-prim'
+              />
+
+              <input
+                type="email"
+                placeholder='Email@example.com'
+                className='font-semibold mt-4 w-full text-white border border-gray-500 p-3 py-4 rounded-xl focus:outline-none focus:border-prim'
+              />
+              <input
+                type="text"
+                placeholder='Subject'
+                className='font-semibold mt-4 w-full text-white border border-gray-500 p-3 py-4 rounded-xl focus:outline-none focus:border-prim'
+              />
+
+              <textarea
+                rows={6}
+                placeholder="Message"
+                className='font-semibold mt-4 w-full text-white border border-gray-500 p-3 py-4 rounded-xl focus:outline-none focus:border-prim'
+              >
+              </textarea>
+            </div>
+
+            <button className='nav-button w-25 items-center cursor-pointer bg-prim text-white rounded-md font-bold px-5 py-2 hover:bg-white hover:text-black transition-all duration-300 hidden lg:flex'>
+              <Link href="#">
+                Submit
+              </Link>
+            </button>
+          </div>
+
+          <div className='contact-map w-full lg:w-1/2 pt-5'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232559.02673210207!2d-3.844343464188269!3d40.438098610297125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e1!3m2!1ses!2ses!4v1772548855607!5m2!1ses!2ses" width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy" className='rounded-2xl'></iframe>
+          </div>
+        </div>
+      </div>
+
+      <Newsletter />
     </>
   )
 }
