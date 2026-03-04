@@ -1,9 +1,14 @@
 import React from 'react'
+import Main from './Main/page'
 
-const page = () => {
+const Page = () => {
   return (
-    <div>page</div>
+    <>
+      <div className='flex items-start h-screen'>
+        <Main />
+      </div>
+    </>
   )
 }
 
-export default page
+export default Page
