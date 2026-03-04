@@ -16,6 +16,8 @@ import SCIcon8 from "@/public/Images/SC-Icon8.svg"
 import SCIcon9 from "@/public/Images/SC-Icon9.svg"
 import SCIcon10 from "@/public/Images/SC-Icon10.svg"
 import { SectionHeader } from "@/app/Components/SectionHeader"
+import { motion } from "framer-motion"
+import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants"
 
 type CategoryType = {
   image: StaticImageData
@@ -80,14 +82,22 @@ const CategoryData: CategoryType[] = [
 const Categories = () => {
   return (
     <>
-      <div className="px-[8%] lg:px-[16%] py-15">
-        <SectionHeader
-          title="Search by Category"
-          text="Explore Exciting Opportunities in the Digital World"
-          linkText="All Categories"
-        />
+      <motion.div
+        variants={staggerContainer(0.1, 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className="px-[8%] lg:px-[16%] py-15"
+      >
+        <motion.div variants={fadeIn("down", 0.2)}>
+          <SectionHeader
+            title="Search by Category"
+            text="Explore Exciting Opportunities in the Digital World"
+            linkText="All Categories"
+          />
+        </motion.div>
 
-        <div className="mt-15">
+        <motion.div variants={fadeIn("up", 0.4)} className="mt-15">
           <Swiper
             slidesPerView={5}
             spaceBetween={20}
@@ -128,8 +138,8 @@ const Categories = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   )
 }
