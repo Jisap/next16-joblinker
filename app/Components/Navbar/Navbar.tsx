@@ -33,10 +33,27 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isFixed, setIsFixed] = useState(false);
+  const [user, setUser] = useState<{ name: string; email: string } | null>(null);
   const pathname = usePathname();
 
   const toggleDropdown = (label: string) => {
     setActiveDropdown((prev) => (prev === label ? null : label));
+  };
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error("Error parsing user data:", error);
+      }
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    setUser(null);
   };
 
   useEffect(() => {
@@ -143,13 +160,36 @@ const Navbar = () => {
 
         {/* BOTONES Y MENU HAMBURGUESA */}
         <div className="flex items-center gap-4">
-          <Link href="/UI-Components/Signup" className="hidden lg:block relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-prim to-black rounded-full blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
-            <button className="relative bg-prim text-white rounded-full font-bold px-7 py-2.5 hover:bg-black transition-all duration-300 transform group-hover:-translate-y-0.5 shadow-lg shadow-prim/30 flex items-center gap-2">
-              Sign In
-              <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
-            </button>
-          </Link>
+          {user ? (
+            <div className="hidden lg:flex items-center gap-3">
+              <Link href="/Dashboard" className="flex items-center gap-3 group px-2 py-1.5 rounded-2xl hover:bg-gray-50 transition-all duration-300">
+                <div className="w-11 h-11 rounded-full bg-prim border-2 border-white shadow-[0_0_0_1px_rgba(0,0,0,0.1)] flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform duration-300">
+                  {(user.name || user.email).charAt(0).toUpperCase()}
+                </div>
+                <div className="hidden xl:block">
+                  <p className="text-sm font-bold text-gray-800 leading-tight truncate max-w-[120px]">
+                    {user.name || user.email.split('@')[0]}
+                  </p>
+                  <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider">Candidate</p>
+                </div>
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="w-10 h-10 flex items-center justify-center rounded-xl text-gray-400 hover:text-red-500 hover:bg-red-50 transition-all duration-300"
+                title="Logout"
+              >
+                <i className="ri-logout-box-r-line text-xl"></i>
+              </button>
+            </div>
+          ) : (
+            <Link href="/UI-Components/Signup" className="hidden lg:block relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-prim to-black rounded-full blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+              <button className="relative bg-prim text-white rounded-full font-bold px-7 py-2.5 hover:bg-black transition-all duration-300 transform group-hover:-translate-y-0.5 shadow-lg shadow-prim/30 flex items-center gap-2">
+                Sign In
+                <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </Link>
+          )}
 
           {/* ICONO ANIMADO MENU MOVIL */}
           <button
@@ -265,12 +305,34 @@ const Navbar = () => {
                 transition={{ delay: navLinks.length * 0.05 + 0.2, duration: 0.3 }}
                 className="mt-6 pt-6 border-t border-gray-100"
               >
-                <Link href="/UI-Components/Signup" className="block">
-                  <button className="w-full bg-black text-white rounded-xl font-bold px-5 py-4 hover:bg-prim transition-all duration-300 shadow-xl shadow-black/10 flex justify-center items-center gap-2">
-                    Sign In Now
-                    <i className="ri-user-add-line"></i>
-                  </button>
-                </Link>
+                {user ? (
+                  <div className="flex flex-col gap-3">
+                    <Link href="/Dashboard" className="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                      <div className="w-14 h-14 rounded-full bg-prim flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-prim/20">
+                        {(user.name || user.email).charAt(0).toUpperCase()}
+                      </div>
+                      <div className="flex-1 overflow-hidden">
+                        <p className="text-lg font-bold text-gray-800 truncate">{user.name || user.email.split('@')[0]}</p>
+                        <p className="text-sm text-gray-500 font-medium">{user.email}</p>
+                      </div>
+                      <i className="ri-arrow-right-s-line text-2xl text-gray-400"></i>
+                    </Link>
+                    <button
+                      onClick={handleLogout}
+                      className="w-full bg-white text-red-500 border border-red-100 rounded-xl font-bold px-5 py-4 hover:bg-red-50 transition-all duration-300 flex justify-center items-center gap-2"
+                    >
+                      <i className="ri-logout-box-r-line"></i>
+                      Sign Out
+                    </button>
+                  </div>
+                ) : (
+                  <Link href="/UI-Components/Signup" className="block">
+                    <button className="w-full bg-black text-white rounded-xl font-bold px-5 py-4 hover:bg-prim transition-all duration-300 shadow-xl shadow-black/10 flex justify-center items-center gap-2">
+                      Sign In Now
+                      <i className="ri-user-add-line"></i>
+                    </button>
+                  </Link>
+                )}
               </motion.div>
             </div>
           </motion.div>
