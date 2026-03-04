@@ -290,3 +290,8 @@ body {
 .candidat-exp:last-child::before {
   height: 100%;
 }
+
+.dashboard-overflow {
+  scrollbar-width: thin;
+  scroll-color: #4F46E5 #000000
+}
