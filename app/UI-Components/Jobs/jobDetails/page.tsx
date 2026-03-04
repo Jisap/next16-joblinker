@@ -9,7 +9,9 @@ import { motion } from "framer-motion"
 import { fadeIn, staggerContainer } from "@/app/Utils/animations/variants"
 
 
-const JobDetails = () => {
+import { Suspense } from 'react'
+
+const JobDetailsContent = () => {
   const searchParams = useSearchParams()
   const id = searchParams.get("id")
   const job = jobsData.find((job) => job.id === id)
@@ -241,10 +243,17 @@ const JobDetails = () => {
           </div>
         </motion.div>
       </div>
-
-
     </>
   )
 }
 
+const JobDetails = () => {
+  return (
+    <Suspense fallback={<div className="p-10 text-center">Loading Job Details...</div>}>
+      <JobDetailsContent />
+    </Suspense>
+  )
+}
+
 export default JobDetails
+
