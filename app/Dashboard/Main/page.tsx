@@ -120,10 +120,10 @@ const Main = () => {
 
   return (
     <div className='flex w-full h-screen overflow-hidden bg-black text-white'>
-      {/* Sidebar Overlay for Mobile */}
+      {/* Sidebar Overlay for Mobile (only when fully expanded on mobile) */}
       {!collapsed && (
         <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
           onClick={() => setCollapsed(true)}
         ></div>
       )}
@@ -132,25 +132,25 @@ const Main = () => {
       <nav
         className={`
           fixed lg:sticky top-0 left-0 h-full bg-black text-white border-r border-gray-700 flex flex-col justify-between transition-all duration-300 z-50
-          ${collapsed ? "-translate-x-full lg:translate-x-0 lg:w-[80px]" : "translate-x-0 w-[280px] lg:w-[20%]"}
+          ${collapsed ? "w-[80px]" : "translate-x-0 w-[280px] lg:w-[20%]"}
         `}
       >
         {/* logo */}
-        <div>
-          <div className='flex items-center justify-between border-b border-gray-700 h-[70px] lg:h-[90px] px-6 lg:px-10'>
+        <div className="w-full">
+          <div className={`flex items-center border-b border-gray-700 h-[70px] lg:h-[90px] transition-all duration-300 ${collapsed ? "justify-center px-0" : "justify-between px-6 lg:px-10"}`}>
             <Link
               href="/"
-              className='text-2xl lg:text-3xl font-bold Merienda text-white whitespace-nowrap overflow-hidden'
+              className={`font-bold Merienda text-white whitespace-nowrap overflow-hidden transition-all duration-300 ${collapsed ? "text-3xl" : "text-2xl lg:text-3xl"}`}
             >
               {collapsed ? (
-                <span className='text-white text-2xl font-extrabold lg:mx-auto'>J</span>
+                <span className='text-prim font-bold'>J</span>
               ) : (
                 <>
                   Job<span className='text-prim'>Linker</span>
                 </>
               )}
             </Link>
-            {/* Close button for mobile */}
+            {/* Close button for mobile - only if expanded */}
             {!collapsed && (
               <button
                 onClick={() => setCollapsed(true)}
@@ -162,23 +162,24 @@ const Main = () => {
           </div>
 
           {/* Menu */}
-          <ul className='p-4 lg:p-6 space-y-2 lg:space-y-4 overflow-y-auto'>
+          <ul className={`p-4 space-y-2 lg:space-y-4 overflow-y-auto ${collapsed ? "flex flex-col items-center" : ""}`}>
             {menuItem.map((item) => (
-              <li key={item.key}>
+              <li key={item.key} className="w-full">
                 <button
                   onClick={() => handleMenuClick(item.key)}
                   className={`
-                    flex items-center gap-3 px-4 py-3 rounded-xl text-md w-full text-left transition-all duration-300 cursor-pointer 
-                    ${collapsed ? "lg:justify-center px-2" : ""}
+                    flex items-center gap-3 px-4 py-3 rounded-xl text-md w-full transition-all duration-300 cursor-pointer 
+                    ${collapsed ? "justify-center px-0" : "text-left"}
                     ${activeSection === item.key
-                      ? "bg-prim text-white"
-                      : "hover:bg-prim/20 text-gray-400 hover:text-white"
+                      ? "bg-prim text-white shadow-lg shadow-prim/20"
+                      : "hover:bg-prim/10 text-gray-400 hover:text-prim"
                     }`
                   }
+                  title={collapsed ? item.label : ""}
                 >
-                  <img src={item.icon} alt={item.label} width={22} height={22} className={activeSection === item.key ? "" : "opacity-70"} />
-                  {(!collapsed || (collapsed && false)) && (
-                    <span className={`text-white ${collapsed ? "lg:hidden" : "block"}`}>{item.label}</span>
+                  <img src={item.icon} alt={item.label} width={22} height={22} className={`transition-all ${activeSection === item.key ? "brightness-110" : "opacity-70 group-hover:opacity-100"}`} />
+                  {!collapsed && (
+                    <span className="text-white font-medium truncate">{item.label}</span>
                   )}
                 </button>
               </li>
@@ -187,15 +188,21 @@ const Main = () => {
         </div>
       </nav>
 
-      <div className='flex-1 flex flex-col h-full min-w-0'>
+      <div className={`flex-1 flex flex-col h-full min-w-0 transition-all duration-300 ${collapsed ? "ml-[80px] lg:ml-0" : "ml-0"}`}>
         {/* Top nav */}
         <div className='w-full flex justify-between items-center gap-3 bg-black border-b border-gray-700 h-[70px] lg:h-[90px] px-4 lg:px-8'>
           {/* Toggle Button */}
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className='bg-prim p-2 rounded-lg cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center'
+            className='arrow-right bg-prim p-2 rounded-lg cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95'
           >
-            <i className={`bi bi-list text-2xl text-white transition-transform duration-300 ${collapsed ? "" : "rotate-90"}`}></i>
+            <Image
+              src={collapsed ? "/Images/arrow-left.svg" : "/Images/arrow-right.svg"}
+              alt="Toggle Menu"
+              width={20}
+              height={20}
+              className={`transition-transform duration-500 ${collapsed ? "rotate-0" : "rotate-180"}`}
+            />
           </button>
 
           {/* User Info */}
